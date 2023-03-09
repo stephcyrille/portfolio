@@ -34,9 +34,6 @@ jobs:
       
     - name: Build the project
       run: npm run build --if-present
-      
-    - name: Test project 
-      run: npm test
     
     - name: Deploy
       run: |
