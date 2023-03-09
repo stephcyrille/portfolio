@@ -21,6 +21,7 @@ export const Header = () => {
             <Nav.Link className={ styles.link } href="#experience">Expérience</Nav.Link>
             <Nav.Link className={ styles.link } href="#formation">Formation</Nav.Link>
             <Nav.Link className={ styles.link } href="#certifications">Certifications</Nav.Link>
+            <Nav.Link className={ styles.link } href="#tools">Outils</Nav.Link>
           </Nav>
           <Nav
             className="ml-auto"

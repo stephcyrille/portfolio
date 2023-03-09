@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import picture from '../../assets/images/profile.jpg'
 // import { faGithub, faLinkedin, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
 // import { faQuoteLeft, faQuoteRight, faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -12,9 +12,9 @@ import { Skills } from '../../component/skills/Skills';
 import { Experience } from '../../component/experience/Experience';
 import { Education } from '../../component/education/Education';
 import { Certification } from '../../component/certification/Certification';
+import { Tools } from '../../component/tools/Tools';
 
 export const Home = (props) => {
-  // const [count, setCounter] = useState(125);
 
   return (
     // <div className="py-4 px-3">
@@ -31,6 +31,7 @@ export const Home = (props) => {
         <Experience />
         <Education />
         <Certification />
+        <Tools />
 
 
         {/* <div className="section-about-me">
