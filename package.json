@@ -18,7 +18,7 @@
     "react-bootstrap": "^2.6.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-tsparticles": "^2.5.3",
     "react-type-animation": "^2.1.2",
     "tsparticles": "^2.5.3",
@@ -49,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
