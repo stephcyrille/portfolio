@@ -6,18 +6,18 @@
 }
 
 .logoSocial a{
-color: white;
-margin-right: 15px;
-font-size: 18px;
-transition: ease-in;
-transition-duration: 0.3s;
-font-size: 22px;
+  color: white;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: ease-in;
+  transition-duration: 0.3s;
+  font-size: 22px;
 }
 
 .logoSocial a:hover{
-color: #f8e027;
-transition: ease-out;
-transition-duration: 0.4s;
+  color: #f8e027;
+  transition: ease-out;
+  transition-duration: 0.4s;
 }
   
   

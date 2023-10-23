@@ -11,11 +11,11 @@ export const Hero = () => {
   let mail = { url: 'mailto:stephcyril.sc@gmail.com', title: 'Envoyer moi un email'};
 
   return (
-    <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" id="aboutMe">
+    <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:pt-16" id="aboutMe">
       <div className="md:p-16 sm:p-8 min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible bg-white rounded-lg shadow-lg">
         <div className="w-full flex">
-          <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-8 pb-24 lg:pb-16">
-            <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Stephane Cyrille MEBENGA ATANGA</h1>
+          <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-8 pb-8 lg:pb-8">
+            <h1 className="text-2xl lg:text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Stephane Cyrille MEBENGA ATANGA</h1>
             <p className="mt-1 text-lg font-semibold text-green-400">
               <TypeAnimation
                 sequence={['Data Scientist', 1000, 
@@ -30,9 +30,9 @@ export const Hero = () => {
               
             <hr className="my-5" />
 
-            <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Quelques mots à mon sujet</h2>
+            <h2 className="text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight">Quelques mots à mon sujet</h2>
 
-            <p className="mt-1 text-lg/8 text-justify">
+            <p className="mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm">
               Motivé, ayant une bonne connaissance des méthodes de gestions de projets et un background en devéloppement conséquent, 
               mon expérience construite sur près de 6 ans dans les métier du développement web et mobile m'a permis de découvrir les 
               univers des progiciels de gestions intégrés et de développer mes connaissances dans ces domaines.<br />
@@ -42,17 +42,17 @@ export const Hero = () => {
             </p>
 
             <div className='py-8'>
-              <p className={`bg-teal-600 ${styles.logoSocial}`}>
-                <a href={github.url} title={github.title} target='new'>
+              <p className='bg-teal-500 inline-block p-3 lg:p-5 md:p-5 rounded-md'>
+                <a href={github.url} title={github.title} target='new' className='text-white mr-4 text-xl lg:text-3xl md:text-3xl hover:text-yellow-300 ease-in-out delay-200 duration-200'>
                 <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href={linkedin.url} title={linkedin.title} target='new'>
+                <a href={linkedin.url} title={linkedin.title} target='new' className='text-white mr-4 text-xl lg:text-3xl md:text-3xl hover:text-yellow-300 ease-in-out delay-200 duration-200'>
                 <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href={twitter.url} title={twitter.title} target='new'>
+                <a href={twitter.url} title={twitter.title} target='new' className='text-white mr-4 text-xl lg:text-3xl md:text-3xl hover:text-yellow-300 ease-in-out delay-200 duration-200'>
                 <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a href={mail.url} title={mail.title}>
+                <a href={mail.url} title={mail.title} className='text-white text-xl lg:text-3xl md:text-3xl hover:text-yellow-300 ease-in-out delay-200 duration-200'>
                 <FontAwesomeIcon icon={faGoogle} />
                 </a>
               </p>
