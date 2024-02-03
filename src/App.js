@@ -1,6 +1,7 @@
 import './App.css';
 import { Header } from './component/Header';
 import { Hero } from './component/Hero';
+import { ExperienceStarWarComponent } from './component/experience/ExperienceStarWars';
 import { Skills } from './component/skills/Skills';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       
       <div>
         <Skills />
+        <ExperienceStarWarComponent />
       </div>
     </>
   );

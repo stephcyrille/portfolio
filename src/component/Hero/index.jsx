@@ -33,12 +33,11 @@ export const Hero = () => {
             <h2 className="text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight">Quelques mots à mon sujet</h2>
 
             <p className="mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm">
-              Motivé, ayant une bonne connaissance des méthodes de gestions de projets et un background en devéloppement conséquent, 
-              mon expérience construite sur près de 6 ans dans les métier du développement web et mobile m'a permis de découvrir les 
-              univers des progiciels de gestions intégrés et de développer mes connaissances dans ces domaines.<br />
-              Je travail actuellement sur les projets de Datascience en Finance, Banque et Assurance afin 
-              de mettre l'Intélligence artificiel au service de ces métiers. Je m'intéresse aussi aussi à la finance décentralisée 
-              et à la rédaction des Smarts Contracts dans le but de développer un produit Financier dans une Blockchain. 
+              Développeur passionné avec 6 ans d'expérience, spécialisé en gestion de projets et développement web/mobile. 
+              Actuellement, je fusionne l'intelligence artificielle avec la finance, la banque et l'assurance. 
+              Attiré par la finance décentralisée, je travaille sur des Smart Contracts pour créer des produits financiers 
+              sur une blockchain. Mon parcours allie technicité et vision stratégique, explorant les opportunités émergentes 
+              du secteur financier.
             </p>
 
             <div className='py-8'>
