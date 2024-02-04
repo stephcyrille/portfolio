@@ -1,20 +1,18 @@
 import React from 'react';
-// Import react-circular-progressbar module and styles
-import "react-circular-progressbar/dist/styles.css";
-import { CircularProgress } from '../gauge/CircularProgress';
-import { LanguageLine } from '../LanguageLine/LanguageLine';
-import styles from './skills.module.css';
 
 const features = [
   { name: 'Analyste Concepteur de SI', description: 'A partir d\'un besoin fonctionnel, je suis capable de monter un cahier de charge, \
           planifier un projet de développement applicatif (activités, coûts et temps) et le suivre jusqu\'a sa mise en production.' },
   { name: 'Développeur Web Fullstack', description: 'Ayant une très bonne connaissance du concept de programmation orienté objet et une \
-          maitrise du langage de développement Python et de ses Frameworks pour le Web, la mise en place d\'API et l\'implementation \
-          du design pattern MVC rentre parfaitement dans mes cordes' },
-  { name: 'Développeur Mobile', description: '6.25" x 3.55" x 1.15"' },
-  { name: 'Intégrateur Technico-fonctionnel ERP', description: 'Hand sanded and finished with natural oil' },
-  { name: 'Ingénieur de Data & Développeur de Système Décisionnel ', description: 'Made from natural materials. Grain and color vary with each item.' },
-  { name: 'Développeur d\'Algorithme de ML (IA)', description: 'Made from natural materials. Grain and color vary with each item.' },
+          maitrise du langage de développement Python et de ses Frameworks pour le Web, la mise en place d\'API.' },
+  { name: 'Développeur Mobile', description: "Grace à la puissance des outils tels que Flutter et Dart je créer des application performantes et multi\
+          plateformes adaptées aux besoins utilisateurs." },
+  { name: 'Intégrateur Technico-fonctionnel ERP', description: 'Sachant que le développeur est au service du métier, je continue de travailler \
+          avec ces derniers afin de créer et d\'intégrer de nombreux modules opérationnels Odoo' },
+  { name: 'Ingénieur de Data & Développeur de Système Décisionnel ', description: 'Avec une expertise dans la réalisation de solutions analytiques \
+          avancées, alliant compétences en ingénierie des données et développement pour fournir des insights stratégiques.' },
+  { name: 'Développeur d\'Algorithme de ML (IA)', description: 'Avec une forte compétence dans la création et l\'optimisation d\'algorithmes \
+          avancés, exploitant l\'IA pour résoudre des problèmes complexes et générer des modèles prédictifs de haute précision.' },
 ]
 
 const skill_resume = "Je possède plusieurs casquettes mais en en général je me considère comme un ingénieur sans vouloir \
