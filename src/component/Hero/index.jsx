@@ -24,9 +24,9 @@ export const Hero = () => {
                         'Développeur Fullstack', 1000, 
                         'Développeur mobile', 1000, 
                         'Intégrateur ERP Odoo', 1000]}
-                            //  Replacing previous Text
-                wrapper="h4"
+                wrapper="span"
                 repeat={Infinity}
+                style={{ fontSize: '3em', display: 'inline-block' }}
               />
             </p>
               
@@ -61,7 +61,7 @@ export const Hero = () => {
         </div>
 
         <div className="p-6">
-            <img className='' src={me} alt="Stephane Cyrille" />
+            {/* <img className='' src={me} alt="Stephane Cyrille" /> */}
         </div>
       </div>
     </div>
