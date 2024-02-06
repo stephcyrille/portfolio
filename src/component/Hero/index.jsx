@@ -1,9 +1,9 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import { faGithub, faLinkedin, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from './hero.module.css';
+
 import me from '../../assets/images/moi.png'
 
 export const Hero = () => {
@@ -61,7 +61,7 @@ export const Hero = () => {
         </div>
 
         <div className="p-6">
-            <img className='' src={me} alt="Stephane Cyrille Picture" />
+            <img className='' src={me} alt="Stephane Cyrille" />
         </div>
       </div>
     </div>
