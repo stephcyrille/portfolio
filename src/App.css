@@ -87,6 +87,10 @@ li {
 .card-container-infos .infos-title .logos .logo-3.active {
   transform: translateX(-200%);
 }
+.logo-4.active {
+  transform: translateX(-300%);
+  transition: 0.2s ease-in-out;
+}
 .card-container-infos .infos-title .titles {
   overflow: hidden;
   height: 38px;
@@ -111,6 +115,13 @@ li {
 }
 .card-container-infos .infos-title .titles .title-3.active {
   transform: translateY(-200%);
+}
+.card-container-infos .infos-title .titles .title-4 {
+  transform: translateY(-200%);
+  transition: 0.2s ease;
+}
+.card-container-infos .infos-title .titles .title-4.active {
+  transform: translateY(-300%);
 }
 .card-container-infos .infos-title .descriptions {
   /* overflow: hidden; */
@@ -145,6 +156,15 @@ li {
 .card-container-infos .infos-title .descriptions .description-3.active {
   opacity: 1;
   transform: translateY(-200%);
+}
+.card-container-infos .infos-title .descriptions .description-4 {
+  transform: translateY(-200%);
+  opacity: 0;
+  transition: 0.2s ease;
+}
+.card-container-infos .infos-title .descriptions .description-4.active {
+  opacity: 1;
+  transform: translateY(-300%);
 }
 .card-container-infos .infos-year h1 {
   font-size: 175px;
@@ -190,6 +210,15 @@ li {
   opacity: 1;
   transform: translateY(-200%);
 }
+.card-container-infos .infos-year .numbers .number-4 {
+  transform: translateY(-200%);
+  transition: 0.2s ease;
+  opacity: 0;
+}
+.card-container-infos .infos-year .numbers .number-4.active {
+  opacity: 1;
+  transform: translateY(-300%);
+}
 .card-container-img {
   max-width: 349px;
   height: 500px;
@@ -222,6 +251,13 @@ li {
 }
 .card-container-img .bg-3.active {
   transform: translateX(-200%);
+}
+.card-container-img .bg-4 {
+  transform: translateX(-185%);
+  transition: 0.2s ease-in-out;
+}
+.card-container-img .bg-4.active {
+  transform: translateX(-285%);
 }
 .card-evolution {
   display: flex;
