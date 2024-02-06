@@ -61,7 +61,7 @@ export const Hero = () => {
         </div>
 
         <div className="p-6">
-            {/* <img className='' src={me} alt="Stephane Cyrille" /> */}
+            <img className='' src={me} alt="Stephane Cyrille" />
         </div>
       </div>
     </div>
