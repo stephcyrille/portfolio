@@ -1,45 +1,55 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import bpop from '../../assets/images/logo_bp_aura.jpeg'
 import basf from '../../assets/images/basf.svg'
 import ewonga from '../../assets/images/logoEwonga.png'
 import eneo from '../../assets/images/eneo.png'
 
 export const ExperienceStarWarComponent = () => {
-
-  var imgCards = [];
-  var logos = [];
-  var numbers = [];
-  var titles = [];
-  var descriptions = [];
-  var circles = [];
-  var lines = [];
+  const refImgCards = useRef([]);
+  const refLogos = useRef([]);
+  const refTitles = useRef([]);
+  const refNumbers = useRef([]);
+  const refDescriptions = useRef([]);
 
   useEffect(() => {
-    imgCards =  document.querySelectorAll(".img-card");
-    logos = document.querySelectorAll(".logo");
-    numbers = document.querySelectorAll(".number");
-    titles = document.querySelectorAll(".title");
-    descriptions = document.querySelectorAll(".description");
-    circles = document.querySelectorAll(".circle");
-    lines = document.querySelectorAll(".line");
+
   }, []);
 
   const onArrowRightClick = () => {
-    changeRight(imgCards)
-    changeRight(logos)
-    changeRight(numbers)
-    changeRight(titles)
-    changeRight(descriptions)
+    const elementImCardList = refImgCards.current;
+    const elementLogoList = refLogos.current;
+    const elementTitleList = refTitles.current;
+    const elementDescriptionList = refDescriptions.current;
+    const elementNumbersList = refNumbers.current;
+    // console.log("........>>>>>>>>>>>>>>>", elementImCardList)
+    const circles = document.querySelectorAll(".circle");
+    const lines = document.querySelectorAll(".line");
+
+    changeRight(elementImCardList)
+    changeRight(elementLogoList)
+    changeRight(elementTitleList)
+    changeRight(elementDescriptionList)
+    changeRight(elementNumbersList)
     changeCircleRight(circles)
     changeLineRight(lines)
   }
   
   const onArrowLeftClick = () => {
-    changeLeft(imgCards)
-    changeLeft(logos)
-    changeLeft(numbers)
-    changeLeft(titles)
-    changeLeft(descriptions)
+    const elementImCardList = refImgCards.current;
+    const elementLogoList = refLogos.current;
+    const elementTitleList = refTitles.current;
+    const elementDescriptionList = refDescriptions.current;
+    const elementNumbersList = refNumbers.current;
+    // console.log("........>>>>>>>>>>>>>>>", elementImCardList)
+    const circles = document.querySelectorAll(".circle");
+    const lines = document.querySelectorAll(".line");
+    
+
+    changeLeft(elementImCardList)
+    changeLeft(elementLogoList)
+    changeLeft(elementTitleList)
+    changeLeft(elementDescriptionList)
+    changeLeft(elementNumbersList)
     changeCircleLeft(circles)
     changeLineLeft(lines)
   }
@@ -132,6 +142,137 @@ export const ExperienceStarWarComponent = () => {
     }
   };
 
+  let logoListObject = [
+    {
+      id: 1,
+      img: bpop,
+      className: 'logo-1 logo active rounded-full',
+      alt: 'logo-1'
+    },
+    {
+      id: 2,
+      img: basf,
+      className: 'logo-2 logo rounded-full',
+      alt: 'logo-2'
+    },
+    {
+      id: 3,
+      img: eneo,
+      className: 'logo-3 logo rounded-full',
+      alt: 'logo-3'
+    },
+    {
+      id: 4,
+      img: ewonga,
+      className: 'logo-4 logo rounded-full',
+      alt: 'logo-4'
+    },
+  ]
+
+  let titleListElement = [
+    {
+      id: 1,
+      className: 'title-1 title active',
+      value: '[Alternace] Datascientist'
+    },
+    {
+      id: 2,
+      className: 'title-2 title',
+      value: '[Stage Alterné] Data Analyst'
+    },
+    {
+      id: 3,
+      className: 'title-3 title',
+      value: '[CDD] Data Analyst'
+    },
+    {
+      id: 4,
+      className: 'title-4 title',
+      value: '[Consultant] Développeur Fullstact'
+    },
+  ]
+
+  let descriptionListElement = [
+    {
+      id: 1,
+      line_1: 'Banque Populaire AURA (en cours)',
+      line_2: 'Corenc, France',
+      line_3: 'De septembre 2023 - Septembre 2024 [12 mois]',
+      className: 'description-1 description active',
+    },
+    {
+      id: 2,
+      line_1: 'BASF Division Agronomique',
+      line_2: 'Ecully, France',
+      line_3: 'Avril 2023 - Aout 2023 [5 mois]',
+      className: 'description-2 description',
+    },
+    {
+      id: 3,
+      line_1: 'ENEO',
+      line_2: 'Douala, Cameroun',
+      line_3: 'Mars 2022 - Aout 2022 [6 mois]',
+      className: 'description-3 description',
+    },
+    {
+      id: 4,
+      line_1: 'Ewonga Sarl',
+      line_2: 'Douala, Cameroun',
+      line_3: 'janvier 2018 - Janvier 2023 [6 ans]',
+      className: 'description-4 description',
+    },
+  ]
+
+  let numberListElement = [
+    {
+      id: 1,
+      className: 'number-1 number active',
+      value: '24'
+    },
+    {
+      id: 2,
+      className: 'number-2 number',
+      value: '23'
+    },
+    {
+      id: 3,
+      className: 'number-3 number',
+      value: '22'
+    },
+    {
+      id: 4,
+      className: 'number-4 number',
+      value: '18'
+    },
+  ]
+
+  let imageListObject = [
+    {
+      id: 1,
+      src: "https://images.unsplash.com/photo-1565347878219-552c839f1447?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      className: "bg-1 img-card active",
+      alt: "bg-1"
+    },
+    {
+      id: 2,
+      src: "https://plus.unsplash.com/premium_photo-1678988086482-2665e9394d73?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      className: "bg-2 img-card",
+      alt: "bg-2"
+    },
+    {
+      id: 3,
+      src: "https://images.unsplash.com/uploads/14114004461850596b57a/4855d5d2?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      className: "bg-3 img-card",
+      alt: "bg-3"
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=3764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      className: "bg-4 img-card",
+      alt: "bg-4"
+    },
+  ]
+
   return (
     // Your JSX structure here
     // Make sure to use elements.imgCards, elements.logos, etc., instead of document.querySelectorAll
@@ -141,57 +282,40 @@ export const ExperienceStarWarComponent = () => {
               <div className="card-container-infos">
                   <div className="infos-title">
                       <div className="logos">
-                          <img src={bpop} className="logo-1 logo active rounded-full" alt="logo-1" />
-                          <img src={basf} className="logo-2 logo rounded-full" alt="logo-2" />
-                          <img src={eneo} className="logo-3 logo rounded-full" alt="logo-3" />
-                          <img src={ewonga} className="logo-4 logo rounded-full" alt="logo-4" />
+                        {logoListObject.map(item => (
+                          <img key={item.id} ref={(element) => refLogos.current.push(element)} src={item.img} alt={item.alt} className={item.className} />
+                        ))}
                       </div>
                       <div className="titles">
-                          <h2 className="title-1 title active">[Alternace] Datascientist</h2>
-                          <h2 className="title-2 title ">[Stage Alterné] Data Analyst</h2>
-                          <h2 className="title-3 title ">[CDD] Data Analyst</h2>
-                          <h2 className="title-4 title ">[Consultant] Développeur Fullstact</h2>
+                        {titleListElement.map(item => (
+                          <h2 key={item.id} ref={(element) => refTitles.current.push(element)} className={item.className}>{item.value}</h2>
+                        ))}
                       </div>
                       <div className="descriptions">
-                          <p className="description-1 description active">
-                            <span>Banque Populaire AURA (en cours)</span><br />
-                            <span>Corenc, France</span><br />
-                            <span>De septembre 2023 - Septembre 2024 [12 mois]</span><br />
+                        {descriptionListElement.map(item => (
+                          <p key={item.id} ref={(element) => refDescriptions.current.push(element)} className={item.className}>
+                            <span>{item.line_1}</span><br />
+                            <span>{item.line_2}</span><br />
+                            <span>{item.line_3}</span><br />
                           </p>
-                          <p className="description-2 description ">
-                            <span>BASF Division Agronomique</span><br />
-                            <span>Ecully, France</span><br />
-                            <span>Avril 2023 - Aout 2023 [5 mois]</span><br />
-                          </p>
-                          <p className="description-3 description ">
-                            <span>ENEO</span><br />
-                            <span>Douala, Cameroun</span><br />
-                            <span>Mars 2022 - Aout 2022 [6 mois]</span><br />
-                          </p>
-                          <p className="description-4 description ">
-                            <span>Ewonga Sarl</span><br />
-                            <span>Douala, Cameroun</span><br />
-                            <span>janvier 2018 - Janvier 2023 [6 ans]</span><br />
-                          </p>
+                        ))}
                       </div>
                   </div>
                   <div className="infos-year">
                       <h1>
                           <span>20</span>
                           <span className="numbers">
-                              <span className="number-1 number active">24</span>
-                              <span className="number-2 number">23</span>
-                              <span className="number-3 number">22</span>
-                              <span className="number-4 number">18</span>
+                            {numberListElement.map(item => (
+                              <span key={item.id} ref={(element) => refNumbers.current.push(element)} className={item.className}>{item.value}</span>
+                            ))}
                           </span>
                       </h1>
                   </div>
               </div>
               <div className="card-container-img">
-                  <img src="https://images.unsplash.com/photo-1565347878219-552c839f1447?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="bg-1 img-card active" alt="bg-1" />
-                  <img src="https://plus.unsplash.com/premium_photo-1678988086482-2665e9394d73?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="bg-2 img-card" alt="bg-2" />
-                  <img src="https://images.unsplash.com/uploads/14114004461850596b57a/4855d5d2?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="bg-3 img-card" alt="bg-3" />
-                  <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=3764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="bg-4 img-card" alt="bg-4" />
+                {imageListObject.map(item => (
+                  <img key={item.id} ref={(element) => refImgCards.current.push(element)} src={item.src} alt={item.alt} className={item.className} />
+                ))}
               </div>
           </div>
           <div className="card-evolution">
@@ -210,15 +334,15 @@ export const ExperienceStarWarComponent = () => {
                   />
               </div>
               <div className="circles">
-                  <div className="circle active"></div>
-                  <div className="line"></div>
-                  <div className="circle"></div>
-                  <div className="line"></div>
-                  <div className="circle"></div>
-                  <div className="line"></div>
-                  <div className="circle"></div>
-                  <div className="line"></div>
-                  <div className="circle"></div>
+                  <div className="circle active" />
+                  <div className="line" />
+                  <div className="circle" />
+                  <div className="line" />
+                  <div className="circle" />
+                  <div className="line" />
+                  <div className="circle" />
+                  <div className="line" />
+                  <div className="circle" />
               </div>
           </div>
       </div>
