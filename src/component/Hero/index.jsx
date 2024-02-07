@@ -1,5 +1,5 @@
 import React from 'react'
-import { TypeAnimation } from 'react-type-animation';
+import { ReactTyped } from "react-typed";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,15 +19,16 @@ export const Hero = () => {
           <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-8 pb-8 lg:pb-8">
             <h1 className="text-2xl lg:text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Stephane Cyrille MEBENGA ATANGA</h1>
             <p className="mt-1 text-lg font-semibold text-green-400">
-              <TypeAnimation
-                sequence={['Data Scientist', 1000, 
-                        'Développeur Fullstack', 1000, 
-                        'Développeur mobile', 1000, 
-                        'Intégrateur ERP Odoo', 1000]}
-                wrapper="span"
-                repeat={Infinity}
-                style={{ fontSize: '3em', display: 'inline-block' }}
-              />
+                <ReactTyped
+                  strings={['Data Scientist', 
+                            'Développeur Fullstack', 
+                            'Développeur mobile', 
+                            'Intégrateur ERP Odoo']}
+                  typeSpeed={100}
+                  loop
+                  backSpeed={20}
+                  style={{ fontSize: '1em', display: 'inline-block' }}
+                />
             </p>
               
             <hr className="my-5" />
