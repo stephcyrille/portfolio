@@ -7,7 +7,7 @@ import { Skills } from './component/skills/Skills';
 function App() {
   return (
     <>
-      <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 h-screen'>
+      <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 max-h-auto'>
           <Header />
           <Hero />
       </div>

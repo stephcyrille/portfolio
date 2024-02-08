@@ -363,12 +363,47 @@ li {
     justify-content: flex-end;
   }
   .card-container-infos .infos-year h1 {
-    font-size: 100px;
+    font-size: 80px;
+    height: 90px;
   }
   .card-container-img {
     width: 45%;
   }
   .card-container-img img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .card-container-img {
+    height: 300px;
+  }
+  .card-container-infos .infos-title h2 {
+    font-size: 14px;
+  }
+  .card-container-infos .infos-title .descriptions {
+    font-size: 14px;
+  }
+  .card-evolution .circles .circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  .arrow-left, .arrow-right{
+    width: 25%;
+  }
+  .card-container-infos .infos-title .titles .title-4 {
+    transform: translateY(-150%);
+  }
+  .card-container-infos .infos-title .titles .title-3.active {
+    transform: translateY(-350%);
+  }
+  .card-container-infos .infos-title .descriptions .description-3.active {
+    opacity: 1;
+    transform: translateY(-250%);
+  }
+  .card-container-infos .infos-title .descriptions .description-4.active {
+    opacity: 1;
+    transform: translateY(-360%);
   }
 }
