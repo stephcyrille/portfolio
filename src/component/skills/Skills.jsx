@@ -1,12 +1,12 @@
 import React from 'react';
 
 const features = [
-  { name: 'Analyste Concepteur de SI', description: 'A partir d\'un besoin fonctionnel, je suis capable de monter un cahier de charge, planifier un projet de développement applicatif (activités, coûts et temps) et le suivre jusqu\'a sa mise en production.' },
-  { name: 'Développeur Web Fullstack', description: 'Ayant une très bonne connaissance du concept de programmation orienté objet et une  maitrise du langage de développement Python et de ses Frameworks pour le Web, la mise en place d\'API.' },
-  { name: 'Développeur Mobile', description: "Grace à la puissance des outils tels que Flutter et Dart je créer des application performantes et multi plateformes adaptées aux besoins utilisateurs." },
-  { name: 'Intégrateur Technico-fonctionnel ERP', description: 'Sachant que le développeur est au service du métier, je continue de travailler avec ces derniers afin de créer et d\'intégrer de nombreux modules opérationnels Odoo' },
-  { name: 'Ingénieur de Data & Développeur de Système Décisionnel ', description: 'Avec une expertise dans la réalisation de solutions analytiques avancées, alliant compétences en ingénierie des données et développement pour fournir des insights stratégiques.' },
-  { name: 'Développeur d\'Algorithme de ML (IA)', description: 'Avec une forte compétence dans la création et l\'optimisation d\'algorithmes avancés, exploitant l\'IA pour résoudre des problèmes complexes et générer des modèles prédictifs de haute précision.' },
+  { name: 'Analyste Concepteur de SI', description: 'A partir d\'un besoin fonctionnel, je suis capable de monter un cahier de charge, planifier un projet de développement applicatif (activités, coûts et temps) et le suivre jusqu\'a sa mise en production.', img: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  { name: 'Développeur Web Fullstack', description: 'Ayant une très bonne connaissance du concept de programmation orienté objet et une  maitrise du langage de développement Python et de ses Frameworks pour le Web, la mise en place d\'API.', img: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  { name: 'Développeur Mobile', description: "Grace à la puissance des outils tels que Flutter et Dart je créer des application performantes et multi plateformes adaptées aux besoins utilisateurs.", img: "https://images.unsplash.com/photo-1605224307451-c86d7093f375?q=80&w=3726&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  { name: 'Intégrateur Technico-fonctionnel ERP', description: 'Sachant que le développeur est au service du métier, je continue de travailler avec ces derniers afin de créer et d\'intégrer de nombreux modules opérationnels Odoo', img: "https://plus.unsplash.com/premium_photo-1689700527514-0bb200cb945b?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  { name: 'Ingénieur de Data & Développeur de Système Décisionnel ', description: 'Avec une expertise dans la réalisation de solutions analytiques avancées, alliant compétences en ingénierie des données et développement pour fournir des insights stratégiques.', img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+  { name: 'Développeur d\'Algorithme de ML (IA)', description: 'Avec une forte compétence dans la création et l\'optimisation d\'algorithmes avancés, exploitant l\'IA pour résoudre des problèmes complexes et générer des modèles prédictifs de haute précision.', img: "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
 ]
 
 const skill_resume = "Je possède plusieurs casquettes mais en en général je me considère comme un ingénieur sans vouloir trop m'attarder sur le titre, de par ma manière d'appréhender les problèmes à 360 dégrés ce qui me permet de me positionner à la place du client et en même temps du développeur."
@@ -25,13 +25,14 @@ export const Skills = () => {
           <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
             {features.map((feature) => (
               <div key={feature.name} className="border-t border-gray-200 pt-4">
+                <img src={feature.img} alt={feature.name} className='w-124 pb-2 rounded-lg bg-gray-100 md:hidden lg:hidden' />
                 <dt className="font-medium text-gray-900">{feature.name}</dt>
                 <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
               </div>
             ))}
           </dl>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+        <div className="hidden lg:grid md:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-8 md:grid-cols-2 md:grid-rows-2 md:gap-8">
           <img
             src="https://images.unsplash.com/photo-1579882392185-581038fbc8c5?auto=format&fit=crop&q=80&w=3174&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
