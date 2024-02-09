@@ -3,6 +3,7 @@ import { Header } from './component/Header';
 import { Hero } from './component/Hero';
 import { ExperienceStarWarComponent } from './component/experience/ExperienceStarWars';
 import { Skills } from './component/skills/Skills';
+import { Footer } from './component/footer/Footer';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Skills />
         <ExperienceStarWarComponent />
       </div>
+
+      <Footer />
     </>
   );
 }
