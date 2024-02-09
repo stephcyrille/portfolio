@@ -39,7 +39,7 @@ export const Hero = () => {
 
             <h2 className="text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight text-center md:text-left lg:text-left pt-1 pb-5">Quelques mots à mon sujet</h2>
 
-            <p className="mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm">
+            <p className="mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm" id="contact">
               Développeur passionné avec 6 ans d'expérience, spécialisé en gestion de projets et développement web/mobile. 
               Actuellement, j'utilises l'IA pour les métiers de la finance, la banque et l'assurance. 
               Mon parcours allie technicité et vision stratégique, explorant les opportunités émergentes 

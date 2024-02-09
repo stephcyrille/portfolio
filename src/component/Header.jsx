@@ -13,15 +13,15 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import logo from '../assets/images/logo_scma_light.png'
 
 const products = [
-  { name: 'Dashboard HR', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Demander unn dévis', description: 'Vous avez besoin de réaliser un devis pour vos projet de Dev ?', href: '#', icon: ChartPieIcon },
+  { name: 'Mes projets', description: 'Retrouvez tous mes projets de développemnt web / mobile et Data Science.', href: '#', icon: FingerPrintIcon },
+  { name: 'Mes ressources', description: 'Retrouvez tous les documents dont vous avez besoins et librairies ici.', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'F1 Predictor', description: 'Project actuel sur lequel je bosses. Venez jetter un coup d\'oeil!', href: '#', icon: SquaresPlusIcon },
+  { name: 'Blog', description: 'Bientôt je ferais des publications sur des sujets intéressants', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Mes videos Youtube', href: '#', icon: PlayCircleIcon },
+  { name: 'Contactez moi', href: '#contact', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -68,7 +68,7 @@ export const Header = () => {
             <Popover.Button 
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
                         hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-              Main projects
+              Ressources
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
 
@@ -119,7 +119,7 @@ export const Header = () => {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            Log in <span aria-hidden="true">&rarr;</span>
+            Se connecter <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
@@ -171,7 +171,7 @@ export const Header = () => {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Product
+                        Ressources
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
@@ -192,31 +192,13 @@ export const Header = () => {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
               </div>
               <div className="py-6">
                 <a
                   href="/"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Se connecter
                 </a>
               </div>
             </div>
