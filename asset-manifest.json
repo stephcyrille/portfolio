@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bcac9600.css",
-    "main.js": "/static/js/main.3fe68095.js",
+    "main.css": "/static/css/main.8be6bc67.css",
+    "main.js": "/static/js/main.41d3997e.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/moi.png": "/static/media/moi.772df8ff735515150fd1.png",
     "static/media/logoEwonga.png": "/static/media/logoEwonga.38fdaf38a81e4d902820.png",
@@ -10,12 +10,12 @@
     "static/media/logo_scma_light.png": "/static/media/logo_scma_light.f09040c278e3de3d1717.png",
     "static/media/basf.svg": "/static/media/basf.b2fb5bd053a09f8503eac4e730e5fe3c.svg",
     "index.html": "/index.html",
-    "main.bcac9600.css.map": "/static/css/main.bcac9600.css.map",
-    "main.3fe68095.js.map": "/static/js/main.3fe68095.js.map",
+    "main.8be6bc67.css.map": "/static/css/main.8be6bc67.css.map",
+    "main.41d3997e.js.map": "/static/js/main.41d3997e.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcac9600.css",
-    "static/js/main.3fe68095.js"
+    "static/css/main.8be6bc67.css",
+    "static/js/main.41d3997e.js"
   ]
 }
