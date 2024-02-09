@@ -276,7 +276,7 @@ export const ExperienceStarWarComponent = () => {
   return (
     // Your JSX structure here
     // Make sure to use elements.imgCards, elements.logos, etc., instead of document.querySelectorAll
-    <div className="card-wrapper">
+    <div className="card-wrapper" id='experience'>
       <div className="card">
           <div className="card-container">
               <div className="card-container-infos">

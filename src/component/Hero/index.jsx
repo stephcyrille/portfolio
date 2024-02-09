@@ -13,7 +13,7 @@ export const Hero = () => {
   let mail = { url: 'mailto:stephcyril.sc@gmail.com', title: 'Envoyer moi un email'};
 
   return (
-    <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 lg:py-16" id="aboutMe">
+    <div className="mx-auto flex max-w-7xl items-center justify-between p-6 pt-28 lg:pt-36 lg:px-8 lg:pb-16" id="aboutMe">
       <div className="md:p-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full lg:overflow-visible bg-white rounded-lg shadow-lg">
         <div className="">
           <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-8 pb-8 lg:pb-8">
