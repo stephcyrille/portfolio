@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -8,29 +9,35 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
+  LanguageIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import logo from '../assets/images/logo_scma_light.png'
-
-const products = [
-  { name: 'Demander unn dévis', description: 'Vous avez besoin de réaliser un devis pour vos projet de Dev ?', href: '#', icon: ChartPieIcon },
-  { name: 'Mes projets', description: 'Retrouvez tous mes projets de développemnt web / mobile et Data Science.', href: '#', icon: FingerPrintIcon },
-  { name: 'Mes ressources', description: 'Retrouvez tous les documents dont vous avez besoins et librairies ici.', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'F1 Predictor', description: 'Project actuel sur lequel je bosses. Venez jetter un coup d\'oeil!', href: '#', icon: SquaresPlusIcon },
-  { name: 'Blog', description: 'Bientôt je ferais des publications sur des sujets intéressants', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-  { name: 'Mes videos Youtube', href: '#', icon: PlayCircleIcon },
-  { name: 'Contactez moi', href: '#contact', icon: PhoneIcon },
-]
+import french from '../assets/images/french.svg'
+import english from '../assets/images/english.svg'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { t, i18n } = useTranslation();
+  const [isFrench, setIsFrench] = useState(true)
+  const [isEnglish, setIsEnglish] = useState(false)
+
+  const products = [
+    { name: t('navbar.ressources.ask_for_quotation.title'), description: t('navbar.ressources.ask_for_quotation.text'), href: '#', icon: ChartPieIcon },
+    { name: t('navbar.ressources.my_projects.title'), description: t('navbar.ressources.my_projects.text'), href: '#', icon: FingerPrintIcon },
+    { name: t('navbar.ressources.my_resources.title'), description: t('navbar.ressources.my_resources.text'), href: '#', icon: CursorArrowRaysIcon },
+    { name: t('navbar.ressources.f1_predictor.title'), description: t('navbar.ressources.f1_predictor.text'), href: '#', icon: SquaresPlusIcon },
+    { name: t('navbar.ressources.blog.title'), description: t('navbar.ressources.blog.text'), href: '#', icon: ArrowPathIcon },
+  ]
+
+  const callsToAction = [
+    { name: t('navbar.ressources.call_to_action.movie'), href: '#', icon: PlayCircleIcon },
+    { name: t('navbar.ressources.call_to_action.contact'), href: '#contact', icon: PhoneIcon },
+  ]
 
   return (
     <header className="bg-white fixed w-screen z-10">
@@ -53,22 +60,22 @@ export const Header = () => {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <a href="#aboutMe" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            About Me
+            {t('navbar.about_me')}
           </a>
           <a href="#skills" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            Skills
+            {t('navbar.skills')}
           </a>
           <a href="#experience" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            Experience
+            {t('navbar.experience')}
           </a>
           <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            Education
+            {t('navbar.education')}
           </a>
           <Popover className="relative">
             <Popover.Button 
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
                         hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-              Ressources
+              {t('ressources.menu')}
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
 
@@ -118,9 +125,65 @@ export const Header = () => {
           </Popover>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+          {/* <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
             Se connecter <span aria-hidden="true">&rarr;</span>
-          </a>
+          </a> */}
+          
+        <Popover className="relative">
+          <Popover.Button 
+            className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
+                      hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+            
+              <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {t('french')}
+              <img src={french} alt="French flag" className='ml-2 w-4 h-4' />
+            <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+          </Popover.Button>
+          <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute top-full z-10 mt-3 w-56 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-lime-800">
+                <div className="py-4">
+                  <button
+                    className="w-full"
+                    type='button'
+                  >
+                    <div 
+                      className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200' : 'hover:bg-gray-100'}`}
+                      onClick={() =>{ 
+                        i18n.changeLanguage('fr')
+                        setIsFrench(true)
+                        setIsEnglish(false)
+                      }}
+                    >
+                      <img src={french} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('french')}</span> 
+                    </div>
+                  </button>
+                  <button
+                    className="w-full"
+                    type='button'
+                  >
+                    <div 
+                      className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200' : 'hover:bg-gray-100'}`}
+                      onClick={() =>{ 
+                        i18n.changeLanguage('en')
+                        setIsEnglish(true)
+                        setIsFrench(false)
+                      }}
+                    >
+                      <img src={english} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('english')}</span> 
+                    </div>
+                  </button>
+                </div>
+              </Popover.Panel>
+            </Transition>  
+          </Popover>
+
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -150,28 +213,28 @@ export const Header = () => {
                 <a href="#aboutMe" 
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  About Me
+                  {t('navbar.about_me')}
                 </a>
                 <a href="#skills" 
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Skills
+                  {t('navbar.skills')}
                 </a>
                 <a href="#experience" 
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Experience
+                  {t('navbar.experience')}
                 </a>
                 <a href="/" 
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Education
+                  {t('navbar.education')}
                 </a>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Ressources
+                      {t('ressources.menu')}
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
@@ -194,12 +257,12 @@ export const Header = () => {
                 </Disclosure>
               </div>
               <div className="py-6">
-                <a
+                {/* <a
                   href="/"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Se connecter
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
