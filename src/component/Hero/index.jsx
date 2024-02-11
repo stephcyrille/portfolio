@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { ReactTyped } from "react-typed";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -7,23 +8,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import me from '../../assets/images/moi.png'
 
 export const Hero = () => {
-  let github = { url: 'https://github.com/stephcyrille', title: 'Me trouver sur Github'};
-  let linkedin = { url: 'https://linkedin.com/in/stephcyrille', title: 'Me trouver sur linkedin'};
-  let twitter = { url: 'https://twitter.com/steph_cyrille', title: 'Laissez moi un tweet'};
-  let mail = { url: 'mailto:stephcyril.sc@gmail.com', title: 'Envoyer moi un email'};
+  const { t } = useTranslation();
+
+  let github = { url: 'https://github.com/stephcyrille', title: t('social_title.github')};
+  let linkedin = { url: 'https://linkedin.com/in/stephcyrille', title: t('social_title.linkedin')};
+  let twitter = { url: 'https://twitter.com/steph_cyrille', title: t('social_title.twitter')};
+  let mail = { url: 'mailto:stephcyril.sc@gmail.com', title: t('social_title.mail')};
 
   return (
     <div className="mx-auto flex max-w-7xl items-center justify-between p-6 pt-28 lg:pt-36 lg:px-8 lg:pb-16" id="aboutMe">
       <div className="md:p-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full lg:overflow-visible bg-white rounded-lg shadow-lg">
         <div className="">
           <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-8 pb-8 lg:pb-8">
-            <h1 className="text-2xl lg:text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Stephane Mebenga</h1>
+            <h1 className="text-2xl lg:text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+              Stephane Mebenga
+            </h1>
             <p className="mt-1 text-lg font-semibold text-green-400">
                 <ReactTyped
-                  strings={['Data Scientist', 
-                            'Développeur Fullstack', 
-                            'Développeur mobile', 
-                            'Intégrateur ERP Odoo']}
+                  strings={[t('hero.role1'), 
+                            t('hero.role2'), 
+                            t('hero.role3'), 
+                            t('hero.role4')]}
                   typeSpeed={100}
                   loop
                   backSpeed={20}
@@ -37,13 +42,12 @@ export const Hero = () => {
                 <img className='' src={me} alt="Stephane Cyrille" width={'70%'}/>
             </div>
 
-            <h2 className="text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight text-center md:text-left lg:text-left pt-1 pb-5">Quelques mots à mon sujet</h2>
+            <h2 className="text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight text-center md:text-left lg:text-left pt-1 pb-5">
+              {t('hero.summary.title')}
+            </h2>
 
             <p className="mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm" id="contact">
-              Développeur passionné avec 6 ans d'expérience, spécialisé en gestion de projets et développement web/mobile. 
-              Actuellement, j'utilises l'IA pour les métiers de la finance, la banque et l'assurance. 
-              Mon parcours allie technicité et vision stratégique, explorant les opportunités émergentes 
-              du secteur financier.
+              {t('hero.summary.content')}
             </p>
 
             <div className="py-8 flex justify-center md:justify-start">

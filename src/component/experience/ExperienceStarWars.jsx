@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import bpop from '../../assets/images/logo_bp_aura.jpeg'
 import basf from '../../assets/images/basf.svg'
 import ewonga from '../../assets/images/logoEwonga.png'
 import eneo from '../../assets/images/eneo.png'
 
 export const ExperienceStarWarComponent = () => {
+  const { t } = useTranslation();
+
   const refImgCards = useRef([]);
   const refLogos = useRef([]);
   const refTitles = useRef([]);
@@ -173,12 +176,12 @@ export const ExperienceStarWarComponent = () => {
     {
       id: 1,
       className: 'title-1 title active',
-      value: '[Alternace] Datascientist'
+      value: `[${t('experience.apprenticeship')}] Datascientist`,
     },
     {
       id: 2,
       className: 'title-2 title',
-      value: '[Stage Alterné] Data Analyst'
+      value: `[${t('intership_alternation')}] Data Analyst`
     },
     {
       id: 3,
@@ -188,7 +191,7 @@ export const ExperienceStarWarComponent = () => {
     {
       id: 4,
       className: 'title-4 title',
-      value: '[Consultant] Développeur Fullstact'
+      value: `[Consultant] ${t('skills.skill2.title')}`
     },
   ]
 
@@ -197,28 +200,28 @@ export const ExperienceStarWarComponent = () => {
       id: 1,
       line_1: 'Banque Populaire AURA (en cours)',
       line_2: 'Corenc, France',
-      line_3: 'De septembre 2023 - Septembre 2024 [12 mois]',
+      line_3: `${t('september')} 2023 - ${t('september')} 2024 [12 ${t('month')}]`,
       className: 'description-1 description active',
     },
     {
       id: 2,
       line_1: 'BASF Division Agronomique',
       line_2: 'Ecully, France',
-      line_3: 'Avril 2023 - Aout 2023 [5 mois]',
+      line_3: `${t('april')} 2023 - ${t('august')} 2023 [5 ${t('month')}]`,
       className: 'description-2 description',
     },
     {
       id: 3,
       line_1: 'ENEO',
-      line_2: 'Douala, Cameroun',
-      line_3: 'Mars 2022 - Aout 2022 [6 mois]',
+      line_2: `Douala ${t('cameroon')}`,
+      line_3: `${t('march')} 2022 - ${t('august')} 2022 [6 ${t('month')}]`,
       className: 'description-3 description',
     },
     {
       id: 4,
       line_1: 'Ewonga Sarl',
-      line_2: 'Douala, Cameroun',
-      line_3: 'janvier 2018 - Janvier 2023 [6 ans]',
+      line_2: `Douala, ${t('cameroon')}`,
+      line_3: `${t('january')} 2018 - ${t('january')} 2023 [6 ${t('year')}]`,
       className: 'description-4 description',
     },
   ]

@@ -1,18 +1,20 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 import logo from '../../assets/images/logo_scma_light.png'
 
 export const Footer = () => {
+  const { t } = useTranslation();
 
   return (
     <footer className="pt-12 bg-white md:pt-8 lg:pt-10">
       <div className="mx-auto max-w-screen-xl text-center">
-          <a href="/" className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+          <a href="/" className="flex justify-center items-center text-2xl font-semibold text-gray-900 ">
             <img className="h-8 w-auto" src={logo} alt="Logo SCMA" /> 
             SC Mebenga  
           </a>
           <p className="my-6 text-gray-500 dark:text-gray-400 w-80 mx-auto">
-            Je répond toujours présent si vous avez besoin de mes services.
+            {t('footer.moto')}
           </p>
 
           <div className="container">
@@ -52,7 +54,7 @@ export const Footer = () => {
 
       </div>
       <hr />
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 block py-3 text-center">© 2021-2022 SCMA Tous les droits reservés.</span>
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 block py-3 text-center">© 2021-2022 SCMA {t('footer.all_right')}.</span>
     </footer>
   )
 }
