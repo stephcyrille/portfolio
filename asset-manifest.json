@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.8be6bc67.css",
-    "main.js": "/static/js/main.41d3997e.js",
+    "main.css": "/static/css/main.068abe29.css",
+    "main.js": "/static/js/main.84336f7f.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/moi.png": "/static/media/moi.772df8ff735515150fd1.png",
     "static/media/logoEwonga.png": "/static/media/logoEwonga.38fdaf38a81e4d902820.png",
     "static/media/eneo.png": "/static/media/eneo.ab7d3fb1e2d67ea0604e.png",
     "static/media/logo_bp_aura.jpeg": "/static/media/logo_bp_aura.55193c40ba8169e946b8.jpeg",
     "static/media/logo_scma_light.png": "/static/media/logo_scma_light.f09040c278e3de3d1717.png",
+    "static/media/english.svg": "/static/media/english.03cb69cc82739315b94ae8b32c44a797.svg",
     "static/media/basf.svg": "/static/media/basf.b2fb5bd053a09f8503eac4e730e5fe3c.svg",
+    "static/media/french.svg": "/static/media/french.dea7e3359c1cad34b1eab2011f8b6693.svg",
     "index.html": "/index.html",
-    "main.8be6bc67.css.map": "/static/css/main.8be6bc67.css.map",
-    "main.41d3997e.js.map": "/static/js/main.41d3997e.js.map",
+    "main.068abe29.css.map": "/static/css/main.068abe29.css.map",
+    "main.84336f7f.js.map": "/static/js/main.84336f7f.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8be6bc67.css",
-    "static/js/main.41d3997e.js"
+    "static/css/main.068abe29.css",
+    "static/js/main.84336f7f.js"
   ]
 }
