@@ -1,9 +1,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import detectBrowserLanguage from 'detect-browser-language'
 
+console.log("==============", detectBrowserLanguage())
 i18n.use(initReactI18next).init({
-  lng: "fr",
-  fallbackLng: "fr",
+  lng: detectBrowserLanguage().split('-')[0],
+  fallbackLng: "en",
   interpolation: {
       escapeValue: false,
   },

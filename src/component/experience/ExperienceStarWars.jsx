@@ -181,7 +181,7 @@ export const ExperienceStarWarComponent = () => {
     {
       id: 2,
       className: 'title-2 title',
-      value: `[${t('intership_alternation')}] Data Analyst`
+      value: `[${t('experience.intership_alternation')}] Data Analyst`
     },
     {
       id: 3,

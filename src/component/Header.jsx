@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
@@ -15,6 +15,8 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import logo from '../assets/images/logo_scma_light.png'
 import french from '../assets/images/french.svg'
 import english from '../assets/images/english.svg'
+import detectBrowserLanguage from 'detect-browser-language'
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -23,8 +25,35 @@ function classNames(...classes) {
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { t, i18n } = useTranslation();
-  const [isFrench, setIsFrench] = useState(true)
+  const [isFrench, setIsFrench] = useState(false)
   const [isEnglish, setIsEnglish] = useState(false)
+  const [curr_lng, setCurrentLanguage] = useState('en');
+
+  useEffect(() => {
+    let lng = detectBrowserLanguage().split('-')[0];
+
+    if(lng === 'fr'){
+      setIsFrench(true);
+      setCurrentLanguage('fr');
+    } else {
+      setIsEnglish(true);
+      setCurrentLanguage('en');
+    }
+  }, []);
+
+  const handleSetFrench = useCallback((lng) => {
+    i18n.changeLanguage(lng);
+    setIsFrench(true);
+    setIsEnglish(false);
+    setCurrentLanguage(lng);
+  }, [i18n])
+
+  const handleSetEnglish = useCallback((lng) => {
+    i18n.changeLanguage(lng)
+    setIsEnglish(true);
+    setIsFrench(false);
+    setCurrentLanguage(lng);
+  }, [i18n])
 
   const products = [
     { name: t('navbar.ressources.ask_for_quotation.title'), description: t('navbar.ressources.ask_for_quotation.text'), href: '#', icon: ChartPieIcon },
@@ -75,7 +104,7 @@ export const Header = () => {
             <Popover.Button 
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
                         hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-              {t('ressources.menu')}
+              {t('navbar.ressources.menu')}
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
 
@@ -134,8 +163,8 @@ export const Header = () => {
             className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
                       hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
             
-              <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {t('french')}
-              <img src={french} alt="French flag" className='ml-2 w-4 h-4' />
+              <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {curr_lng === 'en' ? t('english') : t('french')}
+              <img src={curr_lng === 'en' ? english : french} alt={`${curr_lng} flag`} className='ml-2 w-4 h-4' />
             <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
           </Popover.Button>
           <Transition
@@ -154,12 +183,8 @@ export const Header = () => {
                     type='button'
                   >
                     <div 
-                      className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200' : 'hover:bg-gray-100'}`}
-                      onClick={() =>{ 
-                        i18n.changeLanguage('fr')
-                        setIsFrench(true)
-                        setIsEnglish(false)
-                      }}
+                      className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200' : 'bg-white hover:bg-gray-100'}`}
+                      onClick={() => handleSetFrench('fr')}
                     >
                       <img src={french} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('french')}</span> 
                     </div>
@@ -169,12 +194,8 @@ export const Header = () => {
                     type='button'
                   >
                     <div 
-                      className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200' : 'hover:bg-gray-100'}`}
-                      onClick={() =>{ 
-                        i18n.changeLanguage('en')
-                        setIsEnglish(true)
-                        setIsFrench(false)
-                      }}
+                      className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200' : 'bg-white hover:bg-gray-100'}`}
+                      onClick={() => handleSetEnglish('en')}
                     >
                       <img src={english} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('english')}</span> 
                     </div>
@@ -234,7 +255,7 @@ export const Header = () => {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                      {t('ressources.menu')}
+                      {t('navbar.ressources.menu')}
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                           aria-hidden="true"
@@ -268,8 +289,8 @@ export const Header = () => {
                     className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
                               hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                     
-                      <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {t('french')}
-                      <img src={french} alt="French flag" className='ml-2 w-4 h-4' />
+                      <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {curr_lng}
+                      <img src={isEnglish ? english : french} alt={`${curr_lng} flag`} className='ml-2 w-4 h-4' />
                     <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                   </Popover.Button>
                   <Transition
@@ -291,8 +312,9 @@ export const Header = () => {
                               className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200' : 'hover:bg-gray-100'}`}
                               onClick={() =>{ 
                                 i18n.changeLanguage('fr')
-                                setIsFrench(true)
-                                setIsEnglish(false)
+                                setIsFrench(true);
+                                setIsEnglish(false);
+                                setCurrentLanguage(t('french'));
                               }}
                             >
                               <img src={french} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('french')}</span> 
@@ -306,8 +328,9 @@ export const Header = () => {
                               className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200' : 'hover:bg-gray-100'}`}
                               onClick={() =>{ 
                                 i18n.changeLanguage('en')
-                                setIsEnglish(true)
-                                setIsFrench(false)
+                                setIsEnglish(true);
+                                setIsFrench(false);
+                                setCurrentLanguage(t('english'));
                               }}
                             >
                               <img src={english} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('english')}</span> 
