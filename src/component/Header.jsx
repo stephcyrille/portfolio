@@ -12,10 +12,11 @@ import {
   LanguageIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import detectBrowserLanguage from 'detect-browser-language'
+import { Switcher } from './switcher/Switcher'
 import logo from '../assets/images/logo_scma_light.png'
 import french from '../assets/images/french.svg'
 import english from '../assets/images/english.svg'
-import detectBrowserLanguage from 'detect-browser-language'
 
 
 function classNames(...classes) {
@@ -204,6 +205,7 @@ export const Header = () => {
               </Popover.Panel>
             </Transition>  
           </Popover>
+          <Switcher />
 
         </div>
       </nav>
