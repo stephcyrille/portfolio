@@ -7,11 +7,11 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="pt-12 bg-white md:pt-8 lg:pt-10">
+    <footer className="pt-12 bg-white md:pt-8 lg:pt-10 dark:bg-gray-700">
       <div className="mx-auto max-w-screen-xl text-center">
           <a href="/" className="flex justify-center items-center text-2xl font-semibold text-gray-900 ">
-            <img className="h-8 w-auto" src={logo} alt="Logo SCMA" /> 
-            SC Mebenga  
+            <img className="h-8 w-auto dark:bg-white dark:p-1 dark:w-12 dark:rounded-full dark:h-8 dark:mr-2" src={logo} alt="Logo SCMA" /> 
+            <span className='dark:text-gray-200'>SC Mebenga</span>
           </a>
           <p className="my-6 text-gray-500 dark:text-gray-400 w-80 mx-auto">
             {t('footer.moto')}
@@ -19,7 +19,7 @@ export const Footer = () => {
 
           <div className="container">
             <div className="mb-9 flex justify-center">
-              <a className="mr-9 text-neutral-800 dark:text-neutral-200" href='https://twitter.com/steph_cyrille' target='_blank' rel="noreferrer">
+              <a className="mr-9 text-neutral-800 dark:text-gray-300 dark:hover:text-lime-400" href='https://twitter.com/steph_cyrille' target='_blank' rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -29,7 +29,7 @@ export const Footer = () => {
                     d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                 </svg>
               </a>
-              <a className="mr-9 text-neutral-800 dark:text-neutral-200" href='https://linkedin.com/in/stephcyrille' target='_blank' rel="noreferrer">
+              <a className="mr-9 text-neutral-800 dark:text-gray-300 dark:hover:text-lime-400" href='https://linkedin.com/in/stephcyrille' target='_blank' rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -39,7 +39,7 @@ export const Footer = () => {
                     d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
                 </svg>
               </a>
-              <a className="text-neutral-800 dark:text-neutral-200" href='https://github.com/stephcyrille' target='_blank' rel="noreferrer">
+              <a className="text-neutral-800 dark:text-gray-300 dark:hover:text-lime-400" href='https://github.com/stephcyrille' target='_blank' rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
