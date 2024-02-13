@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.068abe29.css",
-    "main.js": "/static/js/main.f4200072.js",
+    "main.css": "/static/css/main.96d02047.css",
+    "main.js": "/static/js/main.997af2be.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/moi.png": "/static/media/moi.772df8ff735515150fd1.png",
     "static/media/logoEwonga.png": "/static/media/logoEwonga.38fdaf38a81e4d902820.png",
@@ -12,12 +12,12 @@
     "static/media/basf.svg": "/static/media/basf.b2fb5bd053a09f8503eac4e730e5fe3c.svg",
     "static/media/french.svg": "/static/media/french.dea7e3359c1cad34b1eab2011f8b6693.svg",
     "index.html": "/index.html",
-    "main.068abe29.css.map": "/static/css/main.068abe29.css.map",
-    "main.f4200072.js.map": "/static/js/main.f4200072.js.map",
+    "main.96d02047.css.map": "/static/css/main.96d02047.css.map",
+    "main.997af2be.js.map": "/static/js/main.997af2be.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.068abe29.css",
-    "static/js/main.f4200072.js"
+    "static/css/main.96d02047.css",
+    "static/js/main.997af2be.js"
   ]
 }
