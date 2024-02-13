@@ -70,12 +70,12 @@ export const Header = () => {
   ]
 
   return (
-    <header className="bg-white fixed w-screen z-10">
+    <header className="bg-white fixed w-screen z-10 dark:bg-gray-800">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">MASC</span>
-            <img className="h-8 w-auto" src={logo} alt="Logo SCMA" />
+            <img className="h-8 w-auto dark:bg-white dark:p-1 dark:w-12 dark:rounded-full dark:h-8" src={logo} alt="Logo SCMA" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -89,22 +89,22 @@ export const Header = () => {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="#aboutMe" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+          <a href="#aboutMe" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
             {t('navbar.about_me')}
           </a>
-          <a href="#skills" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+          <a href="#skills" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
             {t('navbar.skills')}
           </a>
-          <a href="#experience" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+          <a href="#experience" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
             {t('navbar.experience')}
           </a>
-          <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+          <a href="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
             {t('navbar.education')}
           </a>
           <Popover className="relative">
             <Popover.Button 
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
-                        hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                        hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200 dark:text-gray-100 dark:hover:text-gray-600">
               {t('navbar.ressources.menu')}
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -118,7 +118,7 @@ export const Header = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-lime-800">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-lime-800 dark:bg-gray-800">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -129,11 +129,11 @@ export const Header = () => {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <a href={item.href} className="block font-semibold text-gray-900 dark:text-gray-100 dark:hover:text-gray-600">
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                        <p className="mt-1 dark:text-gray-400 dark:hover:text-gray-800">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -162,7 +162,7 @@ export const Header = () => {
         <Popover className="relative">
           <Popover.Button 
             className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
-                      hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                      hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200 dark:text-gray-100 dark:hover:text-gray-600">
             
               <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {curr_lng === 'en' ? t('english') : t('french')}
               <img src={curr_lng === 'en' ? english : french} alt={`${curr_lng} flag`} className='ml-2 w-4 h-4' />
@@ -177,25 +177,25 @@ export const Header = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute top-full z-10 mt-3 w-56 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-lime-800">
+              <Popover.Panel className="absolute top-full z-10 mt-3 w-56 max-w-md overflow-hidden rounded-3xl bg-white dark:bg-gray-800 shadow-lg ring-1 ring-lime-800">
                 <div className="py-4">
                   <button
-                    className="w-full"
+                    className="w-full dark:text-gray-100 dark:hover:text-gray-800"
                     type='button'
                   >
                     <div 
-                      className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200' : 'bg-white hover:bg-gray-100'}`}
+                      className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200 dark:text-gray-800' : 'bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-lime-200'}`}
                       onClick={() => handleSetFrench('fr')}
                     >
                       <img src={french} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('french')}</span> 
                     </div>
                   </button>
                   <button
-                    className="w-full"
+                    className="w-full dark:text-gray-100 dark:hover:text-gray-800"
                     type='button'
                   >
                     <div 
-                      className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200' : 'bg-white hover:bg-gray-100'}`}
+                      className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200 dark:text-gray-800' : 'bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-lime-200'}`}
                       onClick={() => handleSetEnglish('en')}
                     >
                       <img src={english} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('english')}</span> 
@@ -211,12 +211,12 @@ export const Header = () => {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-800">
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
+                className="h-8 w-auto dark:bg-white dark:p-1 dark:w-12 dark:rounded-full dark:h-8"
                 src={logo}
                 alt=""
               />
@@ -224,7 +224,7 @@ export const Header = () => {
             <Popover className="relative">
               <Popover.Button 
                 className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
-                          hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                          hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200 dark:text-gray-100 dark:hover:text-gray-600">
                 
                   <LanguageIcon className='mr-2 h-6 w-6' style={{fontSize: 26}} /> {curr_lng === 'en' ? t('english') : t('french')}
                   <img src={curr_lng === 'en' ? english : french} alt={`${curr_lng} flag`} className='ml-2 w-4 h-4' />
@@ -239,25 +239,25 @@ export const Header = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute top-full z-10 mt-3 w-56 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-lime-800">
+                  <Popover.Panel className="absolute top-full z-10 mt-3 w-56 max-w-md overflow-hidden rounded-3xl bg-white dark:bg-gray-800 shadow-lg ring-1 ring-lime-800">
                     <div className="py-4">
                       <button
-                        className="w-full"
+                        className="w-full dark:text-gray-100 dark:hover:text-gray-800"
                         type='button'
                       >
                         <div 
-                          className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200' : 'bg-white hover:bg-gray-100'}`}
+                          className={`flex py-2 pl-1 ${isFrench ? 'bg-lime-200 hover:bg-lime-200 dark:text-gray-800' : 'bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-lime-200'}`}
                           onClick={() => handleSetFrench('fr')}
                         >
                           <img src={french} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('french')}</span> 
                         </div>
                       </button>
                       <button
-                        className="w-full"
+                        className="w-full dark:text-gray-100 dark:hover:text-gray-800"
                         type='button'
                       >
                         <div 
-                          className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200' : 'bg-white hover:bg-gray-100'}`}
+                          className={`flex py-2 pl-1 ${isEnglish ? 'bg-lime-200 hover:bg-lime-200 dark:text-gray-800' : 'bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-lime-200'}`}
                           onClick={() => handleSetEnglish('en')}
                         >
                           <img src={english} alt="French flag" className='mr-4 w-6 h-6 ml-3' /> <span>{t('english')}</span> 
@@ -281,29 +281,24 @@ export const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a href="#aboutMe" 
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   {t('navbar.about_me')}
                 </a>
                 <a href="#skills" 
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   {t('navbar.skills')}
                 </a>
                 <a href="#experience" 
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   {t('navbar.experience')}
                 </a>
-                <a href="/" 
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.education')}
-                </a>
-                <Disclosure as="div" className="-mx-3">
+                <Disclosure as="div" className="-mx-3 dark:bg-gray-300">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 dark:rounded-none">
                       {t('navbar.ressources.menu')}
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
@@ -333,6 +328,9 @@ export const Header = () => {
                 >
                   Se connecter
                 </a> */}
+                <div className='flex'>
+                  <span className='mr-3 mt-1 dark:text-gray-50 dark:active:text-lime-300'>Switch theme</span><Switcher />
+                </div>
               </div>
             </div>
           </div>
