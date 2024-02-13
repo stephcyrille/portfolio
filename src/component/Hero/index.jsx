@@ -71,7 +71,7 @@ export const Hero = () => {
         </div>
 
         <div className="p-6 hidden md:flex lg:flex md:justify-center lg:justify-center">
-          {/* <img className='h-80 self-center' src={me} alt="Stephane Cyrille" /> */}
+          <img className='h-80 self-center' src={me} alt="Stephane Cyrille" />
         </div>
       </div>
     </div>

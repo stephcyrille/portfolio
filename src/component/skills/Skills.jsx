@@ -15,11 +15,11 @@ export const Skills = () => {
   ]
   
   return (
-    <div className="bg-white" id='skills'>
+    <div className="bg-white dark:bg-gray-700" id='skills'>
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Compétences</h2>
-          <p className="mt-4 text-gray-500 text-justify">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-200">{t('navbar.skills')}</h2>
+          <p className="mt-4 text-gray-500 text-justify dark:text-gray-300">
             { skill_resume }
           </p>
 
@@ -27,8 +27,8 @@ export const Skills = () => {
             {features.map((feature) => (
               <div key={feature.name} className="border-t border-gray-200 pt-4">
                 <img src={feature.img} alt={feature.name} className='w-124 pb-2 rounded-lg bg-gray-100 md:hidden lg:hidden' />
-                <dt className="font-medium text-gray-900">{feature.name}</dt>
-                <dd className="mt-2 text-sm text-gray-500 text-justify">{feature.description}</dd>
+                <dt className="font-medium text-gray-900 dark:text-gray-200 dark:font-semibold">{feature.name}</dt>
+                <dd className="mt-2 text-sm text-gray-500 text-justify dark:text-gray-300">{feature.description}</dd>
               </div>
             ))}
           </dl>
