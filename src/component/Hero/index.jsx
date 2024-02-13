@@ -17,10 +17,10 @@ export const Hero = () => {
 
   return (
     <div className="mx-auto flex max-w-7xl items-center justify-between p-6 pt-28 lg:pt-36 lg:px-8 lg:pb-16" id="aboutMe">
-      <div className="md:p-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full lg:overflow-visible bg-white rounded-lg shadow-lg">
+      <div className="md:p-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full lg:overflow-visible bg-white rounded-lg shadow-lg dark:bg-gray-700">
         <div className="">
           <div className="min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-8 pb-8 lg:pb-8">
-            <h1 className="text-2xl lg:text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+            <h1 className="text-2xl lg:text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200">
               Stephane Mebenga
             </h1>
             <p className="mt-1 text-lg font-semibold text-green-400">
@@ -42,11 +42,11 @@ export const Hero = () => {
                 <img className='' src={me} alt="Stephane Cyrille" width={'70%'}/>
             </div>
 
-            <h2 className="text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight text-center md:text-left lg:text-left pt-1 pb-5">
+            <h2 className="dark:text-gray-200 text-xl lg:text-2xl md:text-2xl font-bold text-gray-900 tracking-tight text-center md:text-left lg:text-left pt-1 pb-5">
               {t('hero.summary.title')}
             </h2>
 
-            <p className="mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm" id="contact">
+            <p className="dark:text-gray-300 mt-1 lg:text-lg/8 md:text-lg/8 text-justify text-sm" id="contact">
               {t('hero.summary.content')}
             </p>
 
@@ -71,7 +71,7 @@ export const Hero = () => {
         </div>
 
         <div className="p-6 hidden md:flex lg:flex md:justify-center lg:justify-center">
-          <img className='h-80 self-center' src={me} alt="Stephane Cyrille" />
+          {/* <img className='h-80 self-center' src={me} alt="Stephane Cyrille" /> */}
         </div>
       </div>
     </div>
