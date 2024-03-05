@@ -1,5 +1,6 @@
 import { Fragment, useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -29,6 +30,7 @@ export const Header = () => {
   const [isFrench, setIsFrench] = useState(false)
   const [isEnglish, setIsEnglish] = useState(false)
   const [curr_lng, setCurrentLanguage] = useState('en');
+  const location = useLocation();
 
   useEffect(() => {
     let lng = detectBrowserLanguage().split('-')[0];
@@ -89,18 +91,34 @@ export const Header = () => {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <a href="#aboutMe" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            {t('navbar.about_me')}
-          </a>
-          <a href="#skills" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            {t('navbar.skills')}
-          </a>
-          <a href="#experience" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            {t('navbar.experience')}
-          </a>
-          {/* <a href="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
-            {t('navbar.education')}
-          </a> */}
+          {location.pathname === '/' && 
+            <>
+              <a href="#aboutMe" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('navbar.about_me')}
+              </a>
+              <a href="#skills" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('navbar.skills')}
+              </a>
+              <a href="#experience" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('navbar.experience')}
+              </a>
+              <Link to="/projects/f1-predictor" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('navbar.f1Link')}
+              </Link>
+            </>
+          }
+
+          {location.pathname !== '/' && 
+            <>
+              <Link to="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('navbar.home')}
+              </Link>
+              <Link to="/projects/f1-predictor" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('navbar.f1Link')}
+              </Link>
+            </>
+          }
+
           <Popover className="relative">
             <Popover.Button 
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
