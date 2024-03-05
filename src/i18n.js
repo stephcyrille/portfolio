@@ -16,10 +16,12 @@ i18n.use(initReactI18next).init({
         french: "French",
         english: "English",
         navbar: {
+          home: "Home",
           about_me: "About me",
           skills: "Skills",
           experience: "Experience",
           education: "Education",
+          f1Link: "F1 Predictor",
           ressources: {
             menu: "Resources",
             ask_for_quotation: { 
@@ -116,10 +118,12 @@ i18n.use(initReactI18next).init({
         french: "Français",
         english: "Anglais",
         navbar: {
+          home: "Accueil",
           about_me: "A propos de moi",
           skills: "Compétences",
           experience: "Expérience",
           education: "Formation",
+          f1Link: "F1 Predictor",
           ressources: {
             menu: "Réssources",
             ask_for_quotation: { 
