@@ -1,25 +1,21 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import { Header } from './component/Header';
-import { Hero } from './component/Hero';
-import { ExperienceStarWarComponent } from './component/experience/ExperienceStarWars';
-import { Skills } from './component/skills/Skills';
-import { Footer } from './component/footer/Footer';
+import { HomePage } from './pages/home/HomePage'; 
+
 
 function App() {
   return (
-    <>
-      <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 max-h-auto dark:from-lime-200 dark:via-gray-600 dark:to-gray-600'>
-          <Header />
-          <Hero />
-      </div>
-      
+    <Router>
       <div>
-        <Skills />
-        <ExperienceStarWarComponent />
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<HomePage />} />
+        </Routes>
       </div>
-
-      <Footer />
-    </>
+    </Router>
+   
   );
 }
 
