@@ -1,20 +1,22 @@
 import React from 'react'
 // import styles from './predictor.module.css';
 import logoF1 from '../../assets/images/predictor/F1_logo.png'
+// import sargeant from '../../assets/images/predictor/drivers/sargeant.avif'
+import lewis from '../../assets/images/predictor/drivers/lewis.avif'
 
 export const PredictorPage = (props) => {
 
   return (
     <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-48'>
         <div className="p-8 flex flex-col items-center w-3/4 bg-white rounded-lg shadow-lg dark:bg-gray-700 lg:max-h-full" style={{ margin: '0 auto' }}>
-          <img src={logoF1} alt="Your " className="w-32 h-32 rounded-full mb-8" />
 
-          <div className='md:p-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:overflow-visible '>
-            <div className='px-8'>
-              <img src={logoF1} alt="Your " className="w-64 h-64 rounded-full mb-8" />
+          <div className='md:py-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:overflow-visible w-full'>
+            <div className='px-8 flex items-center text-slate-400 dark:text-slate-50'>
+              <img src={lewis} alt="Your " className="w-72 h-72 rounded-full mb-8 mx-auto" />
             </div>
-            <form className="flex flex-col justify-center">
-              <div className="flex flex-wrap mb-4">
+            <form className="flex flex-col justify-center py-12">
+              <img src={logoF1} alt="Your " className="w-32 h-32 rounded-full mb-8 mx-auto" />
+              <div className="flex flex-wrap mb-4 mt-8">
                 <div className="w-full sm:w-1/2 sm:pr-4">
                     <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                       <option selected>Driver name</option>
