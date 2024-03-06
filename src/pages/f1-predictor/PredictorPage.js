@@ -21,11 +21,13 @@ import driver_17 from '../../assets/images/predictor/drivers/stroll.avif'
 import driver_18 from '../../assets/images/predictor/drivers/tsunoda.avif'
 import driver_19 from '../../assets/images/predictor/drivers/zhou.avif'
 
+
 export const PredictorPage = (props) => {
   const drivers = [driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12, driver_13, driver_14, driver_15, driver_16, driver_17, driver_18, driver_19];
+  const drivers_name = ['Alex Albon', 'Fernando Alonso', 'Valteri Bottas', 'Sergio Pérez', 'Pierre Gasly', 'Charles Leclerc', 'Lewis Hamilton', 'Kevin Magnussen', 'Max Verstapen', 'Nico Hulkenberg', 'Lando Norris', 'Esteban Ocon', 'Oscar Piastri', 'Georges Russell', 'Carlos Sainz', 'Logan Sargeant', 'Lance Stroll', 'Yuki Tsunoda', 'Guannuy Zhou']
 
   const containerRef = useRef(null);
-  const [selectedDriverIndex, setSelectedDriverIndex] = useState(null);
+  const [selectedDriverIndex, setSelectedDriverIndex] = useState(0);
 
   const handleImageClick = (index) => {
 
@@ -34,21 +36,29 @@ export const PredictorPage = (props) => {
 
 
   return (
-    <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-48'>
-        <div className='text-lime-100 dark:text-slate-50 pb-12'>
-          <h1 className='text-center text-3xl'>
-            <button className='bg-red-600 px-8 py-4 dark:bg-lime-500 rounded-lg'>Select the driver</button>
+    <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-36'>
+        <div className='text-gray-900 dark:text-slate-50 pb-10'>
+          <h1 className='text-center text-xl'>
+            Select the driver
           </h1>
+          {drivers_name.map((driver, index) => (
+            <h1 key={index} className={`drop-shadow-2xl absolute right-0 left-0 text-center text-7xl mt-4 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}>
+              {driver}
+            </h1>
+          ))}
+          
         </div>
 
-        <div className="h-96 flex">
+        <div className="h-96 flex mt-20">
           {drivers.map((driver, index) => (
-            <img
-              key={index}
-              src={driver}
-              alt={`Driver main`}
-              className={`absolute right-0 left-0 w-96 h-96 rounded-full mb-8 mx-auto border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}
-            />
+            <>
+              <img
+                key={index}
+                src={driver}
+                alt={`Driver main`}
+                className={`absolute right-0 left-0 w-96 h-96 rounded-full mb-8 mx-auto border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}
+              />
+            </>
             ))}
         </div>
 
@@ -61,7 +71,7 @@ export const PredictorPage = (props) => {
             key={index}
             src={driver}
             alt={`Driver ${index + 1}`}
-            className={`w-44 h-44 rounded-full mx-2 hover:border-lime-400 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${selectedDriverIndex === index && 'scale-125 border-lime-400'}`}
+            className={`w-44 h-44 rounded-full mx-2 hover:border-lime-400 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${selectedDriverIndex === index && 'scale-125 border-lime-400 mx-6'}`}
             onMouseOver={() => handleImageClick(index)}
           />
         ))}
