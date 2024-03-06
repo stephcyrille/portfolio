@@ -1,66 +1,71 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 // import styles from './predictor.module.css';
-import logoF1 from '../../assets/images/predictor/F1_logo.png'
-// import sargeant from '../../assets/images/predictor/drivers/sargeant.avif'
-import lewis from '../../assets/images/predictor/drivers/lewis.avif'
+// import logoF1 from '../../assets/images/predictor/F1_logo.png'
+import driver_1 from '../../assets/images/predictor/drivers/albon.avif'
+import driver_2 from '../../assets/images/predictor/drivers/alonso.avif'
+import driver_3 from '../../assets/images/predictor/drivers/bottas.avif'
+import driver_4 from '../../assets/images/predictor/drivers/checo.avif'
+import driver_5 from '../../assets/images/predictor/drivers/gasly.avif'
+import driver_6 from '../../assets/images/predictor/drivers/leclerc.avif'
+import driver_7 from '../../assets/images/predictor/drivers/lewis.avif'
+import driver_8 from '../../assets/images/predictor/drivers/magnussen.avif'
+import driver_9 from '../../assets/images/predictor/drivers/max.avif'
+import driver_10 from '../../assets/images/predictor/drivers/nico.avif'
+import driver_11 from '../../assets/images/predictor/drivers/norris.avif'
+import driver_12 from '../../assets/images/predictor/drivers/ocon.avif'
+import driver_13 from '../../assets/images/predictor/drivers/piastri.avif'
+import driver_14 from '../../assets/images/predictor/drivers/russell.avif'
+import driver_15 from '../../assets/images/predictor/drivers/sainz.avif'
+import driver_16 from '../../assets/images/predictor/drivers/sargeant.avif'
+import driver_17 from '../../assets/images/predictor/drivers/stroll.avif'
+import driver_18 from '../../assets/images/predictor/drivers/tsunoda.avif'
+import driver_19 from '../../assets/images/predictor/drivers/zhou.avif'
 
 export const PredictorPage = (props) => {
+  const drivers = [driver_1, driver_2, driver_3, driver_4, driver_5, driver_6, driver_7, driver_8, driver_9, driver_10, driver_11, driver_12, driver_13, driver_14, driver_15, driver_16, driver_17, driver_18, driver_19];
+
+  const containerRef = useRef(null);
+  const [selectedDriverIndex, setSelectedDriverIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+
+    setSelectedDriverIndex(index);
+  };
+
 
   return (
-    <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-48'>
-        <div className="p-8 flex flex-col items-center w-3/4 bg-white rounded-lg shadow-lg dark:bg-gray-700 lg:max-h-full" style={{ margin: '0 auto' }}>
-
-          <div className='md:py-16 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:overflow-visible w-full'>
-            <div className='px-8 flex items-center text-slate-400 dark:text-slate-50'>
-              <img src={lewis} alt="Your " className="w-72 h-72 rounded-full mb-8 mx-auto" />
-            </div>
-            <form className="flex flex-col justify-center py-12">
-              <img src={logoF1} alt="Your " className="w-32 h-32 rounded-full mb-8 mx-auto" />
-              <div className="flex flex-wrap mb-4 mt-8">
-                <div className="w-full sm:w-1/2 sm:pr-4">
-                    <select id="large" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                      <option selected>Driver name</option>
-                      <option value="US">United States</option>
-                      <option value="CA">Canada</option>
-                      <option value="FR">France</option>
-                      <option value="DE">Germany</option>
-                    </select>
-                </div>
-                <div className="w-full sm:w-1/2 sm:pl-4">
-                  <select id="team" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                      <option selected>Team</option>
-                      <option value="US">United States</option>
-                      <option value="CA">Canada</option>
-                      <option value="FR">France</option>
-                      <option value="DE">Germany</option>
-                    </select>
-                </div>
-              </div>
-              <div className="flex flex-wrap mb-4">
-                <div className="w-full sm:w-1/2 sm:pr-2">
-                  <select id="season" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                      <option selected>Season</option>
-                      <option value="US">United States</option>
-                      <option value="CA">Canada</option>
-                      <option value="FR">France</option>
-                      <option value="DE">Germany</option>
-                    </select>
-                </div>
-                <div className="w-full sm:w-1/2 sm:pl-2">
-                  <select id="circuit" class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                      <option selected>Circuit name</option>
-                      <option value="US">United States</option>
-                      <option value="CA">Canada</option>
-                      <option value="FR">France</option>
-                      <option value="DE">Germany</option>
-                    </select>
-                </div>
-              </div>
-              <button type="submit" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-10 py-6 text-center me-2 m-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Make a prediction</button>
-            </form>
-          </div>
-
+    <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-48'>
+        <div className='text-lime-100 dark:text-slate-50 pb-12'>
+          <h1 className='text-center text-3xl'>
+            <button className='bg-red-600 px-8 py-4 dark:bg-lime-500 rounded-lg'>Select the driver</button>
+          </h1>
         </div>
+
+        <div className="h-96 flex">
+          {drivers.map((driver, index) => (
+            <img
+              key={index}
+              src={driver}
+              alt={`Driver main`}
+              className={`absolute right-0 left-0 w-96 h-96 rounded-full mb-8 mx-auto border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}
+            />
+            ))}
+        </div>
+
+        <div 
+        ref={containerRef} 
+        className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto my-16 bg-slate-500 py-8'
+      >
+        {drivers.map((driver, index) => (
+          <img
+            key={index}
+            src={driver}
+            alt={`Driver ${index + 1}`}
+            className={`w-44 h-44 rounded-full mx-2 hover:border-lime-400 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${selectedDriverIndex === index && 'scale-125 border-lime-400'}`}
+            onMouseOver={() => handleImageClick(index)}
+          />
+        ))}
+      </div>
     </div>
   )
 }
