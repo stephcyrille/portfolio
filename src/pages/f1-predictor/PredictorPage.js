@@ -38,40 +38,40 @@ export const PredictorPage = (props) => {
   return (
     <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-36'>
         <div className='text-gray-900 dark:text-slate-50 pb-10'>
-          <h1 className='text-center text-xl'>
+          <h1 className='text-center lg:text-xl md:text-xl'>
             Select the driver
           </h1>
           {drivers_name.map((driver, index) => (
-            <h1 key={index} className={`drop-shadow-2xl absolute right-0 left-0 text-center text-7xl mt-4 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}>
+            <h1 key={`driver_${index}`} className={`drop-shadow-2xl absolute right-0 left-0 text-center text-5xl lg:text-7xl md:text-7xl mt-0 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}>
               {driver}
             </h1>
           ))}
           
         </div>
 
-        <div className="h-96 flex mt-20">
+        <div className="h-72 mt-16 md:h-96 md:mt-20 lg:h-96 flex lg:mt-20">
           {drivers.map((driver, index) => (
             <>
               <img
-                key={index}
+                key={`2_driver_${index}`}
                 src={driver}
                 alt={`Driver main`}
-                className={`absolute right-0 left-0 w-96 h-96 rounded-full mb-8 mx-auto border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}
+                className={`absolute right-0 left-0 w-72 h-72 lg:w-96 lg:h-96 rounded-full mb-8 mx-auto border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 transition-opacity duration-300 ease-in-out ${selectedDriverIndex === index ? 'opacity-100 translate-y-0 transition-transform' : 'opacity-0 translate-y-10' }`}
               />
             </>
             ))}
         </div>
 
         <div 
-        ref={containerRef} 
-        className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto my-16 bg-slate-500 py-8'
-      >
+          ref={containerRef} 
+          className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto bg-slate-500 py-8 my-16 lg:my-16'
+        >
         {drivers.map((driver, index) => (
           <img
-            key={index}
+            key={`3_driver_${index}`}
             src={driver}
             alt={`Driver ${index + 1}`}
-            className={`w-44 h-44 rounded-full mx-2 hover:border-lime-400 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${selectedDriverIndex === index && 'scale-125 border-lime-400 mx-6'}`}
+            className={`w-28 h-28 md:w-44 md:h-44 lg:w-44 lg:h-44 rounded-full mx-2 hover:border-lime-400 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${selectedDriverIndex === index && 'scale-125 border-lime-400 mx-6'}`}
             onMouseOver={() => handleImageClick(index)}
           />
         ))}
