@@ -298,21 +298,29 @@ export const Header = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a href="#aboutMe" 
-                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.about_me')}
-                </a>
-                <a href="#skills" 
-                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.skills')}
-                </a>
-                <a href="#experience" 
-                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.experience')}
-                </a>
+                   
+                {location.pathname === '/' && 
+                  <>
+                    <a href="#aboutMe" 
+                      className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {t('navbar.about_me')}
+                    </a>
+                    <a href="#skills" 
+                      className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {t('navbar.skills')}
+                    </a>
+                    <a href="#experience" 
+                      className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {t('navbar.experience')}
+                    </a>
+                  </>
+                }
+                <Link to="/projects/f1-predictor" className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ease-in-out delay-80 duration-200">
+                  {t('navbar.f1Link')}
+                </Link>
                 <Disclosure as="div" className="-mx-3 dark:bg-gray-300">
                   {({ open }) => (
                     <>
