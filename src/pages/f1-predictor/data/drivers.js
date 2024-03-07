@@ -17,6 +17,7 @@ import driver_16 from '../../../assets/images/predictor/drivers/sargeant.avif'
 import driver_17 from '../../../assets/images/predictor/drivers/stroll.avif'
 import driver_18 from '../../../assets/images/predictor/drivers/tsunoda.avif'
 import driver_19 from '../../../assets/images/predictor/drivers/zhou.avif'
+import driver_20 from '../../../assets/images/predictor/drivers/riccardo.avif'
 
 
 export const drivers = [
@@ -114,5 +115,10 @@ export const drivers = [
     id: 19,
     name: 'Guanyu Zhou',
     image_src: driver_19
+  },
+  {
+    id: 20,
+    name: 'Daniel Riccardo',
+    image_src: driver_20
   },
 ]
