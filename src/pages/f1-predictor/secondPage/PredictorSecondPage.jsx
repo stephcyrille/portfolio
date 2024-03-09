@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 import { ItemSelectorHScroll } from '../components/ItemSelectorHScroll';
-
+import { ItemNameDisplay } from '../components/ItemNameDisplay';
 import { races } from '../data/circuits';
 
 const routeVariants = {
@@ -62,6 +62,13 @@ export const PredictorSecondPage = () => {
 
           Select the driver
         </button>
+
+        <div className='text-white dark:text-lime-400 pb-8'>
+          <ItemNameDisplay data={races} item_index={selectedDriverIndex} />
+        </div>
+
+        <></>
+
         <ItemSelectorHScroll ref={containerRef} dataList={races} idx={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} /> 
         </div>
       </div>

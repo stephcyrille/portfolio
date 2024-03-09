@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 
 import { DriverBigCard } from '../components/DriverBigCard';
-import { DriverNameDisplay } from '../components/DriverNameDisplay';
+import { ItemNameDisplay } from '../components/ItemNameDisplay';
 import { DriverCharactersList } from '../components/DriverCharactersList';
 import { drivers } from '../data/drivers';
 
@@ -45,7 +45,12 @@ export const PredictorFirstPage = (props) => {
     >
 
       <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-36'>
-        <DriverNameDisplay drivers={drivers} driver_index={selectedDriverIndex} />
+        <div className='text-gray-900 dark:text-slate-50 pb-0'>
+          <h1 className='text-center lg:text-xl md:text-xl'>
+            Select the driver
+          </h1>
+          <ItemNameDisplay data={drivers} item_index={selectedDriverIndex} />
+        </div>
         <DriverBigCard drivers={drivers} driver_index={selectedDriverIndex} />
         <DriverCharactersList ref={containerRef} drivers={drivers} driver_index={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} />
       </div>
