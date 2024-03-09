@@ -44,7 +44,7 @@ export const PredictorFirstPage = (props) => {
       animate="final"
     >
 
-      <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-36'>
+      <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-32'>
         <div className='text-gray-900 dark:text-slate-50 pb-0'>
           <h1 className='text-center lg:text-xl md:text-xl'>
             Select the driver

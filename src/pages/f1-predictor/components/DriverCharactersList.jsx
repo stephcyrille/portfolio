@@ -40,7 +40,7 @@ export const DriverCharactersList = forwardRef(({ drivers, driver_index, handleI
             ref.current = el;
           }
         }}
-        className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto bg-slate-500 py-8 my-16 lg:my-16'
+        className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto bg-slate-500 py-8 my-16 lg:my-16 bg-opacity-60 dark:bg-opacity-60'
         onMouseMove={handleMouseMove}
       >
         {drivers.map((driver, index) => (
