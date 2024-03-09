@@ -18,107 +18,138 @@ import driver_17 from '../../../assets/images/predictor/drivers/stroll.avif'
 import driver_18 from '../../../assets/images/predictor/drivers/tsunoda.avif'
 import driver_19 from '../../../assets/images/predictor/drivers/zhou.avif'
 import driver_20 from '../../../assets/images/predictor/drivers/riccardo.avif'
+import alpine from '../../../assets/images/predictor/scuderia/alpine.avif'
+import aston from '../../../assets/images/predictor/scuderia/aston.avif'
+import ca_rb from '../../../assets/images/predictor/scuderia/ca_rb.avif'
+import ferrari from '../../../assets/images/predictor/scuderia/ferrari.avif'
+import haas from '../../../assets/images/predictor/scuderia/haas.avif'
+import mclaren from '../../../assets/images/predictor/scuderia/mclaren.avif'
+import mercedes from '../../../assets/images/predictor/scuderia/mercedes.avif'
+import redbull from '../../../assets/images/predictor/scuderia/redbull.avif'
+import sauber from '../../../assets/images/predictor/scuderia/sauber.avif'
+import williams from '../../../assets/images/predictor/scuderia/williams.avif'
+
 
 
 export const drivers = [
   {
     id: 1,
     name: 'Alex Albon', 
-    image_src: driver_1
+    image_src: driver_1,
+    team: williams,
   },
   {
     id: 2,
     name: 'Fernando Alonso', 
-    image_src: driver_2
+    image_src: driver_2,
+    team: aston,
   },
   {
     id: 3,
     name: 'Valteri Bottas', 
-    image_src: driver_3
+    image_src: driver_3,
+    team: sauber,
   },
   {
     id: 4,
     name: 'Sergio Pérez', 
-    image_src: driver_4
+    image_src: driver_4,
+    team: redbull,
   },
   {
     id: 5,
     name: 'Pierre Gasly', 
-    image_src: driver_5
+    image_src: driver_5,
+    team: alpine,
   },
   {
     id: 6,
     name: 'Charles Leclerc', 
-    image_src: driver_6
+    image_src: driver_6,
+    team: ferrari,
   },
   {
     id: 7,
     name: 'Lewis Hamilton', 
-    image_src: driver_7
+    image_src: driver_7,
+    team: mercedes,
   },
   {
     id: 8,
     name: 'Kevin Magnussen', 
-    image_src: driver_8
+    image_src: driver_8,
+    team: haas,
   },
   {
     id: 9,
     name: 'Max Verstapen', 
-    image_src: driver_9
+    image_src: driver_9,
+    team: redbull,
   },
   {
     id: 10,
     name: 'Nico Hulkenberg', 
-    image_src: driver_10
+    image_src: driver_10,
+    team: haas,
   },
   {
     id: 11,
     name: 'Lando Norris', 
-    image_src: driver_11
+    image_src: driver_11,
+    team: mclaren,
   },
   {
     id: 12,
     name: 'Esteban Ocon', 
-    image_src: driver_12
+    image_src: driver_12,
+    team: alpine,
   },
   {
     id: 13,
     name: 'Oscar Piastri', 
-    image_src: driver_13
+    image_src: driver_13,
+    team: mclaren,
   },
   {
     id: 14,
     name: 'Georges Russell', 
-    image_src: driver_14
+    image_src: driver_14,
+    team: mercedes,
   },
   {
     id: 15,
     name: 'Carlos Sainz', 
-    image_src: driver_15
+    image_src: driver_15,
+    team: ferrari,
   },
   {
     id: 16,
     name: 'Logan Sargeant', 
-    image_src: driver_16
+    image_src: driver_16,
+    team: williams,
   },
   {
     id: 17,
     name: 'Lance Stroll', 
-    image_src: driver_17
+    image_src: driver_17,
+    team: aston,
   },
   {
     id: 18,
     name: 'Yuki Tsunoda', 
-    image_src: driver_18
+    image_src: driver_18,
+    team: ca_rb,
   },
   {
     id: 19,
     name: 'Guanyu Zhou',
-    image_src: driver_19
+    image_src: driver_19,
+    team: sauber,
   },
   {
     id: 20,
     name: 'Daniel Riccardo',
-    image_src: driver_20
+    image_src: driver_20,
+    team: ca_rb,
   },
 ]
