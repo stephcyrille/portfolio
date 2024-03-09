@@ -48,7 +48,7 @@ export const DriverCharactersList = forwardRef(({ drivers, driver_index, handleI
             key={driver.id}
             src={driver.image_src}
             alt={driver.name}
-            className={`w-28 h-28 md:w-44 md:h-44 lg:w-44 lg:h-44 rounded-full mx-2 hover:border-red-500 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${driver_index === index && 'scale-125 border-red-500 mx-6'}`}
+            className={`w-28 h-28 md:w-44 md:h-44 lg:w-44 lg:h-44 rounded-full mx-2 hover:border-red-500 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${driver_index === index && 'scale-125 border-red-500 dark:border-lime-500 mx-6'}`}
             onMouseOver={() => handleImageHover(index)}
             onClick={handleImageClick}
           />
