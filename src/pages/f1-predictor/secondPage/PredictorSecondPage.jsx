@@ -63,14 +63,15 @@ export const PredictorSecondPage = () => {
           Select the driver
         </button>
 
-        <div className="parent mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-          <div className="md:py-8 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full bg-opacity-60 bg-white lg:overflow-visible rounded-lg shadow-lg dark:bg-gray-700 dark:bg-opacity-60">
-            <div className='text-red-700 dark:text-lime-400 pb-6'>
-              <ItemNameDisplay data={races} item_index={selectedDriverIndex} textSize="text-5xl" />
-            </div>
-
-            <div className="p-6 md:flex lg:flex md:justify-center lg:justify-center">
-              
+        <div className='text-amber-100 dark:text-lime-400 pb-6 bg-amber-800 dark:bg-amber-600 bg-opacity-20 dark:bg-opacity-20 py-4'>
+          <ItemNameDisplay data={races} item_index={selectedDriverIndex} textSize="text-5xl" race={true} />
+        </div>
+        <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+          <div className="md:py-8 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full bg-white lg:overflow-visible rounded-lg shadow-lg dark:bg-gray-700 bg-opacity-80 dark:bg-opacity-70">
+            <div className="p-6 flex flex-col text-amber-950 dark:text-amber-200 text-2xl justify-evenly">
+                <h3><span className='underline font-bold'>Round {races[selectedDriverIndex].id}:</span> {races[selectedDriverIndex].name}</h3>
+                <h3><span className='underline font-bold'>Location:</span> {races[selectedDriverIndex].city}, {races[selectedDriverIndex].country}</h3>
+                <h3><span className='underline font-bold'>Date</span>: {races[selectedDriverIndex].date}</h3>
             </div>
             <div className="p-6 hidden md:flex lg:flex md:justify-center lg:justify-center">
               <img className='h-80 self-center' src={races[selectedDriverIndex].image_src} alt="Stephane Cyrille" />
