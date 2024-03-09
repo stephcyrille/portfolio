@@ -56,7 +56,7 @@ export const races = [
     city: 'Manama',
     date: '2024-03-02',
     imgSrc: round1,
-    circuitImgSrc: circuit1,
+    image_src: circuit1,
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ export const races = [
     city: 'Jeddah',
     date: '2024-03-09',
     imgSrc: round2,
-    circuitImgSrc: circuit2,
+    image_src: circuit2,
   },
   {
     id: 3,
@@ -74,7 +74,7 @@ export const races = [
     city: 'Melbourne',
     date: '2024-03-24',
     imgSrc: round3,
-    circuitImgSrc: circuit3,
+    image_src: circuit3,
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ export const races = [
     city: 'Suzuka',
     date: '2024-04-07',
     imgSrc: round4,
-    circuitImgSrc: circuit4,
+    image_src: circuit4,
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ export const races = [
     city: 'Shanghai',
     date: '2024-04-21',
     imgSrc: round5,
-    circuitImgSrc: circuit5,
+    image_src: circuit5,
   },
   {
     id: 6,
@@ -101,7 +101,7 @@ export const races = [
     city: 'Miami',
     date: '2024-05-05',
     imgSrc: round6,
-    circuitImgSrc: circuit6,
+    image_src: circuit6,
   },
   {
     id: 7,
@@ -110,7 +110,7 @@ export const races = [
     city: 'Imola',
     date: '2024-05-19',
     imgSrc: round7,
-    circuitImgSrc: circuit7,
+    image_src: circuit7,
   },
   {
     id: 8,
@@ -119,7 +119,7 @@ export const races = [
     city: 'Monaco',
     date: '2024-05-26',
     imgSrc: round8,
-    circuitImgSrc: circuit8,
+    image_src: circuit8,
   },
   {
     id: 9,
@@ -128,7 +128,7 @@ export const races = [
     city: 'Montréal',
     date: '2024-06-09',
     imgSrc: round9,
-    circuitImgSrc: circuit9,
+    image_src: circuit9,
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const races = [
     city: 'Barcelona',
     date: '2024-06-23',
     imgSrc: round10,
-    circuitImgSrc: circuit10,
+    image_src: circuit10,
   },
   {
     id: 11,
@@ -146,7 +146,7 @@ export const races = [
     city: 'Spielberg',
     date: '2024-06-30',
     imgSrc: round11,
-    circuitImgSrc: circuit11,
+    image_src: circuit11,
   },
   {
     id: 12,
@@ -155,7 +155,7 @@ export const races = [
     city: 'Silverstone',
     date: '2024-07-07',
     imgSrc: round12,
-    circuitImgSrc: circuit12,
+    image_src: circuit12,
   },
   {
     id: 13,
@@ -164,7 +164,7 @@ export const races = [
     city: 'Mogyoród',
     date: '2024-07-21',
     imgSrc: round13,
-    circuitImgSrc: circuit13,
+    image_src: circuit13,
   },
   {
     id: 14,
@@ -173,7 +173,7 @@ export const races = [
     city: 'Malmedi',
     date: '2024-07-28',
     imgSrc: round14,
-    circuitImgSrc: circuit14,
+    image_src: circuit14,
   },
   {
     id: 15,
@@ -182,7 +182,7 @@ export const races = [
     city: 'Zandvoort',
     date: '2024-08-25',
     imgSrc: round15,
-    circuitImgSrc: circuit15,
+    image_src: circuit15,
   },
   {
     id: 16,
@@ -191,7 +191,7 @@ export const races = [
     city: 'Monza',
     date: '2024-09-01',
     imgSrc: round16,
-    circuitImgSrc: circuit16,
+    image_src: circuit16,
   },
   {
     id: 17,
@@ -200,7 +200,7 @@ export const races = [
     city: 'Baku',
     date: '2024-09-15',
     imgSrc: round17,
-    circuitImgSrc: circuit17,
+    image_src: circuit17,
   },
   {
     id: 18,
@@ -209,7 +209,7 @@ export const races = [
     city: 'Marina Bay Street',
     date: '2024-09-22',
     imgSrc: round18,
-    circuitImgSrc: circuit18,
+    image_src: circuit18,
   },
   {
     id: 19,
@@ -218,7 +218,7 @@ export const races = [
     city: 'Austin',
     date: '2024-10-20',
     imgSrc: round19,
-    circuitImgSrc: circuit19,
+    image_src: circuit19,
   },
   {
     id: 20,
@@ -227,7 +227,7 @@ export const races = [
     city: 'Mexico City',
     date: '2024-10-27',
     imgSrc: round20,
-    circuitImgSrc: circuit20,
+    image_src: circuit20,
   },
   {
     id: 21,
@@ -236,7 +236,7 @@ export const races = [
     city: 'Sao Polo',
     date: '2024-11-03',
     imgSrc: round21,
-    circuitImgSrc: circuit21,
+    image_src: circuit21,
   },
   {
     id: 22,
@@ -245,7 +245,7 @@ export const races = [
     city: 'Las Vegas',
     date: '2024-11-23',
     imgSrc: round22,
-    circuitImgSrc: circuit22,
+    image_src: circuit22,
   },
   {
     id: 23,
@@ -254,7 +254,7 @@ export const races = [
     city: 'Losail',
     date: '2024-11-01',
     imgSrc: round23,
-    circuitImgSrc: circuit23,
+    image_src: circuit23,
   },
   {
     id: 24,
@@ -263,6 +263,6 @@ export const races = [
     city: 'Abu Dhabi',
     date: '2024-12-08',
     imgSrc: round24,
-    circuitImgSrc: circuit24,
+    image_src: circuit24,
   },
 ]
