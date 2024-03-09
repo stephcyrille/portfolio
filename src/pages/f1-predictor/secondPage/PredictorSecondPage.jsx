@@ -2,7 +2,7 @@ import React, {useRef, useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 
-import { DriverCharactersList } from '../components/DriverCharactersList';
+import { ItemSelectorHScroll } from '../components/ItemSelectorHScroll';
 
 import { races } from '../data/circuits';
 
@@ -62,7 +62,7 @@ export const PredictorSecondPage = () => {
 
           Select the driver
         </button>
-        <DriverCharactersList ref={containerRef} drivers={races} driver_index={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} /> 
+        <ItemSelectorHScroll ref={containerRef} dataList={races} idx={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} /> 
         </div>
       </div>
     </motion.div>
