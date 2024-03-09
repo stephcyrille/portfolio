@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef } from "react";
 
-export const DriverCharactersList = forwardRef(({ drivers, driver_index, handleImageClick }, ref) => {
+export const DriverCharactersList = forwardRef(({ drivers, driver_index, handleImageClick, handleImageHover }, ref) => {
   const divRef = useRef(null);
 
   const handleMouseMove = (event) => {
@@ -49,7 +49,8 @@ export const DriverCharactersList = forwardRef(({ drivers, driver_index, handleI
             src={driver.image_src}
             alt={driver.name}
             className={`w-28 h-28 md:w-44 md:h-44 lg:w-44 lg:h-44 rounded-full mx-2 hover:border-lime-400 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${driver_index === index && 'scale-125 border-lime-400 mx-6'}`}
-            onMouseOver={() => handleImageClick(index)}
+            onMouseOver={() => handleImageHover(index)}
+            onClick={handleImageClick}
           />
         ))}
       </div>

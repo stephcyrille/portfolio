@@ -102,7 +102,7 @@ export const Header = () => {
               <a href="#experience" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.experience')}
               </a>
-              <NavLink to="/projects/f1-predictor" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+              <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.f1Link')}
               </NavLink>
             </>
@@ -113,7 +113,7 @@ export const Header = () => {
               <NavLink to="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.home')}
               </NavLink>
-              <NavLink to="/projects/f1-predictor" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+              <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.f1Link')}
               </NavLink>
             </>
@@ -318,7 +318,7 @@ export const Header = () => {
                     </a>
                   </>
                 }
-                <NavLink to="/projects/f1-predictor" className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ease-in-out delay-80 duration-200">
+                <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ease-in-out delay-80 duration-200">
                   {t('navbar.f1Link')}
                 </NavLink>
                 <Disclosure as="div" className="-mx-3 dark:bg-gray-300">
