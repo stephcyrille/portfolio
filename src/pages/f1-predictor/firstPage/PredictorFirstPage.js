@@ -33,7 +33,7 @@ export const PredictorFirstPage = (props) => {
   };
   
   const handleImageClick = (index) => {
-    navigate("/projects/f1-predictor/select-constructor");
+    navigate("/projects/f1-predictor/select-circuit");
   };
 
 

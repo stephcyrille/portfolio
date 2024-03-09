@@ -13,7 +13,7 @@ export const RouteWithAnimation = (props) => {
       <Route path="/projects/f1-predictor/" >
         {/* Add sub-routes inside this Route component */}
         <Route path="select-driver/" element={<PredictorFirstPage />} /> 
-        <Route path="select-constructor/" element={<PredictorSecondPage />} />
+        <Route path="select-circuit/" element={<PredictorSecondPage />} />
       </Route>
       {/* <Route path="/contact" element={<Contact />} /> */}
     </Routes>
