@@ -38,7 +38,7 @@ export const PredictorSecondPage = () => {
   };
   
   const handleImageClick = (index) => {
-    navigate("/projects/f1-predictor/select-circuit");
+    navigate("/projects/f1-predictor/prediction");
   };
 
   return (
