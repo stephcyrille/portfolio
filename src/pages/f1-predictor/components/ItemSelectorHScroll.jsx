@@ -44,7 +44,6 @@ export const ItemSelectorHScroll = forwardRef(({ dataList, idx, handleImageClick
         onMouseMove={handleMouseMove}
       >
         {dataList.map((data, key) => (
-          <>
             <img
               key={data.id}
               src={data.image_src}
@@ -54,7 +53,6 @@ export const ItemSelectorHScroll = forwardRef(({ dataList, idx, handleImageClick
               onClick={handleImageClick}
               data-tooltip-target="tooltip-default"
             />
-          </>
         ))}
       </div>
     </>

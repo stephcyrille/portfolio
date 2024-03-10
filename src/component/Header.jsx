@@ -113,7 +113,7 @@ export const Header = () => {
               <NavLink to="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.home')}
               </NavLink>
-              <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+              <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm bg-lime-100 font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.f1Link')}
               </NavLink>
             </>

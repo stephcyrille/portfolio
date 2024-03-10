@@ -53,7 +53,7 @@ export const PredictorSecondPage = () => {
         <div className="absolute z-20 h-screen lg:h-screen w-full pt-32">
         <button
           onClick={handleBackClick}
-          class="bg-transparent text-red-100 dark:border-lime-600 dark:hover:bg-lime-600 hover:text-white hover:bg-red-600 dark:hover:text-blue-100 dark:text-lime-300 py-2 px-4 rounded-full 
+          className="bg-transparent text-red-100 dark:border-lime-600 dark:hover:bg-lime-600 hover:text-white hover:bg-red-600 dark:hover:text-blue-100 dark:text-lime-300 py-2 px-4 rounded-full 
           focus:outline-none transition duration-200 hover:shadow-xl ml-12 hover:-translate-x-4"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 inline mr-2">
