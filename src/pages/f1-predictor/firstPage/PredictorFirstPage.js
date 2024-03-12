@@ -57,10 +57,6 @@ export const PredictorFirstPage = (props) => {
           <DriverCharactersList ref={containerRef} drivers={drivers} driver_index={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} />
         </div>
       </div>
-
-      {/* <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-teal-100 h-screen dark:from-lime-200 dark:via-gray-600 dark:to-gray-600 pt-32'>
-        
-      </div> */}
     </motion.div>
   )
 }
