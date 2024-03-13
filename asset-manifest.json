@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4338a4a.css",
-    "main.js": "/static/js/main.3d71f454.js",
+    "main.css": "/static/css/main.49d576d7.css",
+    "main.js": "/static/js/main.b4173ae6.js",
     "static/js/592.6d7de513.chunk.js": "/static/js/592.6d7de513.chunk.js",
     "static/media/moi.png": "/static/media/moi.772df8ff735515150fd1.png",
     "static/media/r5.avif": "/static/media/r5.8452b66951bbbd84881e.avif",
@@ -61,6 +61,7 @@
     "static/media/eneo.png": "/static/media/eneo.ab7d3fb1e2d67ea0604e.png",
     "static/media/cr21.avif": "/static/media/cr21.e18f1b6049bc7de6fab9.avif",
     "static/media/cr12.avif": "/static/media/cr12.ffddc845787965038e7c.avif",
+    "static/media/Formula1-Regular-1.ttf": "/static/media/Formula1-Regular-1.0f4e3d54644717199c6f.ttf",
     "static/media/redbull.avif": "/static/media/redbull.13a25955ec3c84f8d59d.avif",
     "static/media/cr2.avif": "/static/media/cr2.0aeab51d637e2ac6bc63.avif",
     "static/media/cr18.avif": "/static/media/cr18.0ae6c1e723eff55fdc5e.avif",
@@ -90,12 +91,12 @@
     "static/media/basf.svg": "/static/media/basf.b2fb5bd053a09f8503eac4e730e5fe3c.svg",
     "static/media/french.svg": "/static/media/french.dea7e3359c1cad34b1eab2011f8b6693.svg",
     "index.html": "/index.html",
-    "main.f4338a4a.css.map": "/static/css/main.f4338a4a.css.map",
-    "main.3d71f454.js.map": "/static/js/main.3d71f454.js.map",
+    "main.49d576d7.css.map": "/static/css/main.49d576d7.css.map",
+    "main.b4173ae6.js.map": "/static/js/main.b4173ae6.js.map",
     "592.6d7de513.chunk.js.map": "/static/js/592.6d7de513.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4338a4a.css",
-    "static/js/main.3d71f454.js"
+    "static/css/main.49d576d7.css",
+    "static/js/main.b4173ae6.js"
   ]
 }
