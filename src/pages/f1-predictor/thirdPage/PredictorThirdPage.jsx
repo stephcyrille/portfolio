@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 import { drivers } from '../data/drivers';
+import { races } from '../data/circuits';
 
 const routeVariants = {
   initial: {
@@ -38,7 +39,7 @@ export const PredictorThirdPage = () => {
       <div className="relative mix-blend-overlay">
         <img src={drivers[selectedDriverIndex].team} alt="BannerImage" className="absolute h-screen lg:h-screen w-full object-cover object-right z-10" />
         <div className="absolute z-20 bg-gradient-to-r from-gray-900 via-gray-600 to-red-300 dark:from-gray-900 dark:via-lime-800 dark:to-gray-900 h-screen lg:h-screen w-full opacity-60" />
-        <div className="absolute z-20 h-screen lg:h-screen w-full pt-32">
+        <div className="absolute z-20 h-screen lg:h-screen w-full pt-24 md:pt-32 lg:pt-32">
           <button
             onClick={handleBackClick}
             className="bg-transparent text-red-100 dark:border-lime-600 dark:hover:bg-lime-600 hover:text-white hover:bg-red-600 dark:hover:text-blue-100 dark:text-lime-300 py-2 px-4 rounded-full 
@@ -51,10 +52,20 @@ export const PredictorThirdPage = () => {
             Select the driver
           </button>
 
-          <div className='text-amber-400 dark:text-lime-400 pb-0'>
-            <h1 className='text-center lg:text-xl md:text-xl text-white'>
-              Hello world!!
-            </h1>
+          <div className='flex flex-col items-center'>
+            <img
+            src={drivers[selectedDriverIndex].image_src}
+            alt={`Driver main`}
+            className={`w-60 h-60 lg:w-96 lg:h-96 rounded-full mb-8 border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 mr-8`} />
+            <h1 className='text-4xl md:text-7xl lg:text-7xl font-face-gm text-yellow-400 drop-shadow-[0_1.2px_1.2px_rgba(250,0,0,0.8)] dark:text-white'>{drivers[selectedDriverIndex].name}</h1>
+            <div className='text-5xl md:text-9xl lg:text-9xl mb-10 text-red-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-face-gm dark:text-lime-400'>#5</div>
+
+            <div className='p-8 rounded-3xl text-gray-100 font-face-gm text-center bg-red-600 bg-opacity-5 dark:text-00 dark:bg-lime-500 dark:bg-opacity-5'>
+              <h1 className='text-xl md:text-4xl lg:text-4xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>Position predicted: <span className='font-bold'>5</span></h1>
+              <h1 className='text-sm md:text-3xl lg:text-3xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>Circuit name: <span className=''>{races[selectedDriverIndex].name}</span></h1>
+
+              <p className='text-xs md:text-sm lg:text-sm italic drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'><span className='underline'>Important: </span>The winning probability is around 30% with margin estimated to +/- 6 rank positions</p>
+            </div>
           </div>
         </div>
       </div>
