@@ -18,21 +18,6 @@ const routeVariants = {
   }
 }
 
-const childVariants = {
-  initial: {
-    opacity: 0,
-    y: "50px",
-  },
-  final: {
-    opacity: 1,
-    y: "0px",
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-    },
-  },
-};
-
 export const HomePage = () => {
 
   return (
@@ -41,11 +26,9 @@ export const HomePage = () => {
       initial="initial"
       animate="final"
     >
-      <motion.div variants={childVariants} initial="initial" animate="final">
-        <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 max-h-auto dark:from-lime-200 dark:via-gray-600 dark:to-gray-600'>
-          <Hero />
-        </div>
-      </motion.div>
+      <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-teal-300 max-h-auto dark:from-lime-200 dark:via-gray-600 dark:to-gray-600'>
+        <Hero />
+      </div>
         
       <div>
         <Skills />
