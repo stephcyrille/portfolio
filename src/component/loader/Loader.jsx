@@ -12,7 +12,7 @@ const loadingCircle = {
   display: "block",
   width: "1rem",
   height: "1rem",
-  backgroundColor: "#3A36DB",
+  backgroundColor: "#ef4444",
   borderRadius: "0.5rem",
 };
 
@@ -48,9 +48,9 @@ export const Loader = () => {
   return (
     <div>
       {/* Background overlay */}
-      <div className="fixed w-full min-h-screen z-50 bg-white">
+      <div className="fixed w-full min-h-screen z-50 bg-white dark:bg-gray-800">
         <div className="flex fixed w-full justify-center items-center h-screen">
-          <h1 className='text-sm md:text-3xl lg:text-3xl mr-4'>Wait a moment please...</h1><br/>
+          <h1 className='text-sm md:text-3xl lg:text-3xl mr-4 dark:text-lime-300'>Wait a moment please...</h1><br/>
           {/* Loading animation */}
           <motion.div
             style={loadingContainer}
