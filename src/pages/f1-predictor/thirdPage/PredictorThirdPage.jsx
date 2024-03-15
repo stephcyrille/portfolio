@@ -35,7 +35,7 @@ export const PredictorThirdPage = () => {
   }, [loading])
 
   const handleBackClick = (index) => {
-    navigate("/projects/f1-predictor/select-circuit");
+    navigate("/projects/f1-predictor/select-driver");
   };
 
   return (
@@ -59,7 +59,7 @@ export const PredictorThirdPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
 
-                Select the driver
+                Restart
               </button>
 
               <div className='flex flex-col items-center'>
