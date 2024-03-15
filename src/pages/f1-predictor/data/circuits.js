@@ -53,10 +53,11 @@ export const races = [
     id: 1,
     name: 'Bahrain International Circuit',
     country: 'Barhain',
-    city: 'Manama',
+    city: 'Sakhir',
     date: '2024-03-02',
     imgSrc: round1,
     image_src: circuit1,
+    internalId: 3
   },
   {
     id: 2,
@@ -66,6 +67,7 @@ export const races = [
     date: '2024-03-09',
     imgSrc: round2,
     image_src: circuit2,
+    internalId: 77
   },
   {
     id: 3,
@@ -75,6 +77,7 @@ export const races = [
     date: '2024-03-24',
     imgSrc: round3,
     image_src: circuit3,
+    internalId: 1
   },
   {
     id: 4,
@@ -84,6 +87,7 @@ export const races = [
     date: '2024-04-07',
     imgSrc: round4,
     image_src: circuit4,
+    internalId: 22
   },
   {
     id: 5,
@@ -93,6 +97,7 @@ export const races = [
     date: '2024-04-21',
     imgSrc: round5,
     image_src: circuit5,
+    internalId: 17
   },
   {
     id: 6,
@@ -102,6 +107,7 @@ export const races = [
     date: '2024-05-05',
     imgSrc: round6,
     image_src: circuit6,
+    internalId: 79
   },
   {
     id: 7,
@@ -111,15 +117,17 @@ export const races = [
     date: '2024-05-19',
     imgSrc: round7,
     image_src: circuit7,
+    internalId: 21
   },
   {
     id: 8,
     name: 'Circuit de Monaco',
-    country: 'France',
-    city: 'Monaco',
+    country: 'Monaco',
+    city: 'Monte-Carlo',
     date: '2024-05-26',
     imgSrc: round8,
     image_src: circuit8,
+    internalId: 6
   },
   {
     id: 9,
@@ -129,15 +137,17 @@ export const races = [
     date: '2024-06-09',
     imgSrc: round9,
     image_src: circuit9,
+    internalId: 7
   },
   {
     id: 10,
     name: 'Circuit de Barcelona-Catalunya',
     country: 'Spain',
-    city: 'Barcelona',
+    city: 'Montmeló',
     date: '2024-06-23',
     imgSrc: round10,
     image_src: circuit10,
+    internalId: 4
   },
   {
     id: 11,
@@ -147,6 +157,7 @@ export const races = [
     date: '2024-06-30',
     imgSrc: round11,
     image_src: circuit11,
+    internalId: 70
   },
   {
     id: 12,
@@ -156,15 +167,17 @@ export const races = [
     date: '2024-07-07',
     imgSrc: round12,
     image_src: circuit12,
+    internalId: 9
   },
   {
     id: 13,
     name: 'Hungaroring',
     country: 'Hungary',
-    city: 'Mogyoród',
+    city: 'Budapest',
     date: '2024-07-21',
     imgSrc: round13,
     image_src: circuit13,
+    internalId: 11
   },
   {
     id: 14,
@@ -174,6 +187,7 @@ export const races = [
     date: '2024-07-28',
     imgSrc: round14,
     image_src: circuit14,
+    internalId: 13
   },
   {
     id: 15,
@@ -183,6 +197,7 @@ export const races = [
     date: '2024-08-25',
     imgSrc: round15,
     image_src: circuit15,
+    internalId: 39
   },
   {
     id: 16,
@@ -192,6 +207,7 @@ export const races = [
     date: '2024-09-01',
     imgSrc: round16,
     image_src: circuit16,
+    internalId: 14
   },
   {
     id: 17,
@@ -201,15 +217,17 @@ export const races = [
     date: '2024-09-15',
     imgSrc: round17,
     image_src: circuit17,
+    internalId: 73
   },
   {
     id: 18,
     name: 'Marina Bay Street Circuit',
     country: 'Singapore',
-    city: 'Marina Bay Street',
+    city: 'Marina Bay',
     date: '2024-09-22',
     imgSrc: round18,
     image_src: circuit18,
+    internalId: 15
   },
   {
     id: 19,
@@ -219,6 +237,7 @@ export const races = [
     date: '2024-10-20',
     imgSrc: round19,
     image_src: circuit19,
+    internalId: 69
   },
   {
     id: 20,
@@ -228,15 +247,17 @@ export const races = [
     date: '2024-10-27',
     imgSrc: round20,
     image_src: circuit20,
+    internalId: 32
   },
   {
     id: 21,
     name: 'Autódromo José Carlos Pace',
     country: 'Brazil',
-    city: 'Sao Polo',
+    city: 'São Paulo',
     date: '2024-11-03',
     imgSrc: round21,
     image_src: circuit21,
+    internalId: 18
   },
   {
     id: 22,
@@ -246,15 +267,17 @@ export const races = [
     date: '2024-11-23',
     imgSrc: round22,
     image_src: circuit22,
+    internalId: 80
   },
   {
     id: 23,
-    name: 'Lusail International Circuit',
+    name: 'Losail International Circuit',
     country: 'Qatar',
-    city: 'Losail',
+    city: 'Al Daayen',
     date: '2024-11-01',
     imgSrc: round23,
     image_src: circuit23,
+    internalId: 78
   },
   {
     id: 24,
@@ -264,5 +287,6 @@ export const races = [
     date: '2024-12-08',
     imgSrc: round24,
     image_src: circuit24,
+    internalId: 24
   },
 ]
