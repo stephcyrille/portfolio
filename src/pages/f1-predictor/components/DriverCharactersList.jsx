@@ -40,14 +40,14 @@ export const DriverCharactersList = forwardRef(({ drivers, driver_index, handleI
             ref.current = el;
           }
         }}
-        className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto bg-slate-500 py-4 lg:my-16 bg-opacity-60 dark:bg-opacity-60'
+        className='flex items-center text-slate-400 dark:text-slate-50 overflow-x-auto bg-slate-500 py-8 lg:my-16 bg-opacity-60 dark:bg-opacity-60'
         onMouseMove={handleMouseMove}
       >
         {drivers.map((driver, index) => (
           <img
-            key={driver.id}
-            src={driver.image_src}
-            alt={driver.name}
+            key={index}
+            src={driver.driver_img}
+            alt={driver.full_name}
             className={`w-24 h-24 md:w-44 md:h-44 lg:w-44 lg:h-44 rounded-full mx-2 hover:border-red-500 border-4 cursor-pointer hover:scale-125 ease-out duration-300 ${driver_index === index && 'scale-125 border-red-500 dark:border-lime-500 mx-6'}`}
             onMouseOver={() => handleImageHover(index)}
             onClick={handleImageClick}
