@@ -45,8 +45,8 @@ export const ItemSelectorHScroll = forwardRef(({ dataList, idx, handleImageClick
       >
         {dataList.map((data, key) => (
             <img
-              key={data.id}
-              src={data.image_src}
+              key={key}
+              src={data.circuit_img}
               alt={data.name}
               className={`w-24 h-24 md:w-44 md:h-52 lg:w-52 lg:h-52 rounded-full mx-2 p-2 hover:bg-white cursor-pointer hover:scale-125 ease-out duration-300 ${idx === key ? 'bg-white dark:bg-gray-400 scale-125 mx-8' : ''}`}
               onMouseOver={() => handleImageHover(key)}

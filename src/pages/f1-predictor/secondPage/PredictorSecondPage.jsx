@@ -1,10 +1,10 @@
-import React, {useRef, useState} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 import { ItemSelectorHScroll } from '../components/ItemSelectorHScroll';
 import { ItemNameDisplay } from '../components/ItemNameDisplay';
-import { races } from '../data/circuits';
+import { getAlCircuitList } from '../../../services'
 
 const routeVariants = {
   initial: {
@@ -26,6 +26,27 @@ const routeVariants = {
 export const PredictorSecondPage = () => {
   const containerRef = useRef(null);
   const navigate = useNavigate();
+  const [circuitList, setCircuitList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await getAlCircuitList();
+        console.log('Circuit List:', result);
+        try{
+          setCircuitList(result);
+        } catch (arr_error) {
+          console.log("Your array is empty: ", arr_error);
+        }
+        // Handle the result or update your component state accordingly
+      } catch (error) {
+        // Handle errors
+        console.error('Error getting drivers list:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleBackClick = (index) => {
     navigate("/projects/f1-predictor/select-driver");
@@ -37,7 +58,7 @@ export const PredictorSecondPage = () => {
     setSelectedDriverIndex(index);
   };
   
-  const handleImageClick = (index) => {
+  const handleImageClick = () => {
     navigate("/projects/f1-predictor/prediction");
   };
 
@@ -48,7 +69,7 @@ export const PredictorSecondPage = () => {
       animate="final"
     >
       <div className="relative mix-blend-overlay">
-        <img src={races[selectedDriverIndex].imgSrc} alt="BannerImage" className="absolute h-screen lg:h-screen w-full object-cover object-right z-10" />
+        <img src={circuitList.length > 0 ? circuitList[selectedDriverIndex].card_img : ''} alt="BannerImage" className="absolute h-screen lg:h-screen w-full object-cover object-right z-10" />
         <div className="absolute z-20 bg-gradient-to-r from-gray-900 via-gray-600 to-red-300 dark:from-gray-900 dark:via-lime-800 dark:to-gray-900 h-screen lg:h-screen w-full opacity-60" />
         <div className="absolute z-20 h-screen lg:h-screen w-full pt-24 lg:pt-32 md:pt-32">
         <button
@@ -64,22 +85,24 @@ export const PredictorSecondPage = () => {
         </button>
 
         <div className='text-amber-100 dark:text-lime-400 pb-2 md:pb-6 lg:pb-6 bg-amber-800 dark:bg-amber-600 bg-opacity-20 dark:bg-opacity-20 py-4'>
-          <ItemNameDisplay data={races} item_index={selectedDriverIndex} textSize="text-5xl" textSizeSm='text-2xl' race={true} />
+          <ItemNameDisplay data={circuitList} item_index={selectedDriverIndex} textSize="text-5xl" textSizeSm='text-2xl' race={true} />
         </div>
         <div className="mx-auto lg:flex md:flex max-w-7xl items-center justify-between px-6 lg:px-8">
           <div className="md:py-8 sm:p-8 lg:grid lg:grid-cols-2 lg:static lg:max-h-full bg-white lg:overflow-visible rounded-lg shadow-lg dark:bg-gray-700 bg-opacity-80 dark:bg-opacity-70">
-            <div className="p-6 flex flex-col text-amber-950 dark:text-amber-200 text-xl lg:text-2xl md:text-2xl justify-evenly">
-                <h3><span className='underline font-bold'>Round {races[selectedDriverIndex].id}:</span> <span className="text-sm lg:text-xl md:text-xl">{races[selectedDriverIndex].name}</span></h3>
-                <h3><span className='underline font-bold'>Location:</span> <span className="text-sm lg:text-xl md:text-xl">{races[selectedDriverIndex].city}, {races[selectedDriverIndex].country}</span></h3>
-                <h3><span className='underline font-bold'>Date</span>: <span className="text-sm lg:text-xl md:text-xl">{races[selectedDriverIndex].date}</span></h3>
+            <img className="absolute w-96 z-10 opacity-15" alt='Flag' src="https://www.nationalflags.shop/WebRoot/vilkasfi01/Shops/2014080403/53E6/2F4C/EE37/B2B6/6292/0A28/100B/04E0/Flag_of_Bahrain_Fotor.jpg" />
+            <div className="p-6 flex flex-col z-50 text-amber-950 dark:text-amber-200 text-xl lg:text-2xl md:text-2xl justify-evenly">
+                {/* TODO Add the round number and the date of the race */}
+                <h3><span className='underline font-bold'>Round {circuitList[selectedDriverIndex].id}:</span> <span className="text-sm lg:text-xl md:text-xl">{circuitList[selectedDriverIndex].name}</span></h3>
+                <h3><span className='underline font-bold'>Location:</span> <span className="text-sm lg:text-xl md:text-xl">{circuitList[selectedDriverIndex].location}, {circuitList[selectedDriverIndex].country}</span></h3>
+                <h3><span className='underline font-bold'>Date</span>: <span className="text-sm lg:text-xl md:text-xl">{circuitList[selectedDriverIndex].date}</span></h3>
             </div>
             <div className="p-6 md:flex lg:flex md:justify-center lg:justify-center">
-              <img className='h-60 md:h-80 lg:h-80 self-center' src={races[selectedDriverIndex].image_src} alt="Stephane Cyrille" />
+              <img className='h-60 md:h-80 lg:h-80 self-center' src={circuitList.length > 0 ? circuitList[selectedDriverIndex].circuit_img : ''} alt="Stephane Cyrille" />
             </div>
           </div>
         </div>
 
-        <ItemSelectorHScroll ref={containerRef} dataList={races} idx={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} /> 
+        <ItemSelectorHScroll ref={containerRef} dataList={circuitList} idx={selectedDriverIndex} handleImageHover={handleImageHover} handleImageClick={handleImageClick} /> 
         </div>
       </div>
     </motion.div>
