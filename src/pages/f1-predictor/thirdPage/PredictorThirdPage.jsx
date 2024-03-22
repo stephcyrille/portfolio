@@ -66,9 +66,9 @@ export const PredictorThirdPage = () => {
                 <img
                 src={drivers[selectedDriverIndex].image_src}
                 alt={`Driver main`}
-                className={`w-60 h-60 lg:w-96 lg:h-96 rounded-full mb-8 border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 mr-8`} />
+                className={`w-60 h-60 lg:w-96 lg:h-96 rounded-full mb-8 lg:mb-4 border-red-500 dark:border-lime-500 border-x-4 border-spacing-10 mr-8`} />
                 <h1 className='text-4xl md:text-7xl lg:text-7xl font-face-gm text-yellow-400 drop-shadow-[0_1.2px_1.2px_rgba(250,0,0,0.8)] dark:text-white'>{drivers[selectedDriverIndex].name}</h1>
-                <div className='text-5xl md:text-9xl lg:text-9xl mb-10 text-red-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-face-gm dark:text-lime-400'>#5</div>
+                <div className='text-5xl md:text-9xl lg:text-9xl mb-10 lg:mb-0 text-red-500 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] font-face-gm dark:text-lime-400'>#5</div>
 
                 <div className='p-8 rounded-3xl text-gray-100 font-face-gm text-center bg-red-600 bg-opacity-5 dark:text-00 dark:bg-lime-500 dark:bg-opacity-5'>
                   <h1 className='text-xl md:text-4xl lg:text-4xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>Position predicted: <span className='font-bold'>5</span></h1>
