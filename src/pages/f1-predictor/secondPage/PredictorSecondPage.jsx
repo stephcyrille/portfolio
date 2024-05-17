@@ -1,5 +1,5 @@
 import React, {useRef, useState, useEffect} from "react";
-import { useNavigate } from 'react-router-dom';
+import { createSearchParams, useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 import { ItemSelectorHScroll } from '../components/ItemSelectorHScroll';
@@ -59,7 +59,16 @@ export const PredictorSecondPage = () => {
   };
   
   const handleImageClick = () => {
-    navigate("/projects/f1-predictor/prediction");
+    navigate({
+      pathname: "/projects/f1-predictor/prediction",
+      search: createSearchParams({
+        driverId: "bar",
+        constructorId: "bar",
+        circuitId: "bar",
+        raceRound: "bar",
+        year: "bar",
+      }).toString()
+    });
   };
 
   return (

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
+import { createSearchParams, useNavigate } from 'react-router-dom';
 
 import { DriverBigCard } from '../components/DriverBigCard';
 import { ItemNameDisplay } from '../components/ItemNameDisplay';
@@ -54,7 +54,14 @@ export const PredictorFirstPage = (props) => {
   };
   
   const handleImageClick = () => {
-    navigate("/projects/f1-predictor/select-circuit");
+    navigate({
+      pathname: "/projects/f1-predictor/select-circuit",
+      search: createSearchParams({
+        driverId: driversList[selectedDriverIndex].driverId,
+        constructorId: driversList[selectedDriverIndex].constructorId,
+        year: "bar",
+      }).toString()
+    });
   };
 
 
