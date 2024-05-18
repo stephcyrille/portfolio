@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -102,20 +102,20 @@ export const Header = () => {
               <a href="#experience" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.experience')}
               </a>
-              <Link to="/projects/f1-predictor" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+              <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.f1Link')}
-              </Link>
+              </NavLink>
             </>
           }
 
           {location.pathname !== '/' && 
             <>
-              <Link to="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+              <NavLink to="/" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.home')}
-              </Link>
-              <Link to="/projects/f1-predictor" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+              </NavLink>
+              <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-700 dark:hover:text-gray-600 text-sm bg-lime-100 font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.f1Link')}
-              </Link>
+              </NavLink>
             </>
           }
 
@@ -298,21 +298,29 @@ export const Header = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a href="#aboutMe" 
-                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.about_me')}
-                </a>
-                <a href="#skills" 
-                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.skills')}
-                </a>
-                <a href="#experience" 
-                  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t('navbar.experience')}
-                </a>
+                   
+                {location.pathname === '/' && 
+                  <>
+                    <a href="#aboutMe" 
+                      className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {t('navbar.about_me')}
+                    </a>
+                    <a href="#skills" 
+                      className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {t('navbar.skills')}
+                    </a>
+                    <a href="#experience" 
+                      className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {t('navbar.experience')}
+                    </a>
+                  </>
+                }
+                <NavLink to="/projects/f1-predictor/select-driver" className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ease-in-out delay-80 duration-200">
+                  {t('navbar.f1Link')}
+                </NavLink>
                 <Disclosure as="div" className="-mx-3 dark:bg-gray-300">
                   {({ open }) => (
                     <>

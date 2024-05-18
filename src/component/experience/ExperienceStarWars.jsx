@@ -4,6 +4,7 @@ import bpop from '../../assets/images/logo_bp_aura.jpeg'
 import basf from '../../assets/images/basf.svg'
 import ewonga from '../../assets/images/logoEwonga.png'
 import eneo from '../../assets/images/eneo.png'
+import { motion } from "framer-motion";
 
 export const ExperienceStarWarComponent = () => {
   const { t } = useTranslation();
@@ -277,79 +278,93 @@ export const ExperienceStarWarComponent = () => {
   ]
 
   return (
-    // Your JSX structure here
-    // Make sure to use elements.imgCards, elements.logos, etc., instead of document.querySelectorAll
-    <div className="card-wrapper" id='experience'>
-      <div className="card">
-          <div className="card-container">
-              <div className="card-container-infos">
-                  <div className="infos-title">
-                      <div className="logos">
-                        {logoListObject.map(item => (
-                          <img key={item.id} ref={(element) => refLogos.current.push(element)} src={item.img} alt={item.alt} className={item.className} />
-                        ))}
-                      </div>
-                      <div className="titles">
-                        {titleListElement.map(item => (
-                          <h2 key={item.id} ref={(element) => refTitles.current.push(element)} className={item.className}>{item.value}</h2>
-                        ))}
-                      </div>
-                      <div className="descriptions">
-                        {descriptionListElement.map(item => (
-                          <p key={item.id} ref={(element) => refDescriptions.current.push(element)} className={item.className}>
-                            <span>{item.line_1}</span><br />
-                            <span>{item.line_2}</span><br />
-                            <span>{item.line_3}</span><br />
-                          </p>
-                        ))}
-                      </div>
-                  </div>
-                  <div className="infos-year">
-                      <h1>
-                          <span>20</span>
-                          <span className="numbers">
-                            {numberListElement.map(item => (
-                              <span key={item.id} ref={(element) => refNumbers.current.push(element)} className={item.className}>{item.value}</span>
-                            ))}
-                          </span>
-                      </h1>
-                  </div>
-              </div>
-              <div className="card-container-img">
-                {imageListObject.map(item => (
-                  <img key={item.id} ref={(element) => refImgCards.current.push(element)} src={item.src} alt={item.alt} className={item.className} />
-                ))}
-              </div>
-          </div>
-          <div className="card-evolution">
-              <div className="card-evolution-arrow">
-                  <img 
-                    src="https://star-wars-lime.vercel.app/assets/arrow-left.png" 
-                    className="arrow-left"
-                     alt="arrow-left"
-                     onClick={onArrowLeftClick}
-                  />
-                  <img 
-                    src="https://star-wars-lime.vercel.app/assets/arrow-right.png" 
-                    className="arrow-right" 
-                    alt="arrow-right"
-                    onClick={onArrowRightClick}
-                  />
-              </div>
-              <div className="circles">
-                  <div className="circle active" />
-                  <div className="line" />
-                  <div className="circle" />
-                  <div className="line" />
-                  <div className="circle" />
-                  <div className="line" />
-                  <div className="circle" />
-                  <div className="line" />
-                  <div className="circle" />
-              </div>
-          </div>
+    <motion.div
+      initial={{
+        opacity: 0,
+        // if odd index card,slide from right instead of left
+        x: 3 % 2 === 0 ? 50 : -50
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0, // Slide in to its original position
+        transition: {
+          duration: 1 // Animation duration
+        }
+      }}
+      viewport={{ once: false }}
+    >
+      <div className="card-wrapper" id='experience'>
+        <div className="card">
+            <div className="card-container">
+                <div className="card-container-infos">
+                    <div className="infos-title">
+                        <div className="logos">
+                          {logoListObject.map(item => (
+                            <img key={item.id} ref={(element) => refLogos.current.push(element)} src={item.img} alt={item.alt} className={item.className} />
+                          ))}
+                        </div>
+                        <div className="titles">
+                          {titleListElement.map(item => (
+                            <h2 key={item.id} ref={(element) => refTitles.current.push(element)} className={item.className}>{item.value}</h2>
+                          ))}
+                        </div>
+                        <div className="descriptions">
+                          {descriptionListElement.map(item => (
+                            <p key={item.id} ref={(element) => refDescriptions.current.push(element)} className={item.className}>
+                              <span>{item.line_1}</span><br />
+                              <span>{item.line_2}</span><br />
+                              <span>{item.line_3}</span><br />
+                            </p>
+                          ))}
+                        </div>
+                    </div>
+                    <div className="infos-year">
+                        <h1>
+                            <span>20</span>
+                            <span className="numbers">
+                              {numberListElement.map(item => (
+                                <span key={item.id} ref={(element) => refNumbers.current.push(element)} className={item.className}>{item.value}</span>
+                              ))}
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+                <div className="card-container-img">
+                  {imageListObject.map(item => (
+                    <img key={item.id} ref={(element) => refImgCards.current.push(element)} src={item.src} alt={item.alt} className={item.className} />
+                  ))}
+                </div>
+            </div>
+            <div className="card-evolution">
+                <div className="card-evolution-arrow">
+                    <img 
+                      src="https://star-wars-lime.vercel.app/assets/arrow-left.png" 
+                      className="arrow-left"
+                      alt="arrow-left"
+                      onClick={onArrowLeftClick}
+                    />
+                    <img 
+                      src="https://star-wars-lime.vercel.app/assets/arrow-right.png" 
+                      className="arrow-right" 
+                      alt="arrow-right"
+                      onClick={onArrowRightClick}
+                    />
+                </div>
+                <div className="circles">
+                    <div className="circle active" />
+                    <div className="line" />
+                    <div className="circle" />
+                    <div className="line" />
+                    <div className="circle" />
+                    <div className="line" />
+                    <div className="circle" />
+                    <div className="line" />
+                    <div className="circle" />
+                </div>
+            </div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

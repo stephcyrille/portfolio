@@ -1,9 +1,9 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Header } from './component/Header';
-import { HomePage } from './pages/home/HomePage'; 
-import { PredictorPage } from './pages/f1-predictor/PredictorPage'; 
+import { LocationProvider } from './providers/LocationProvider';
+import { RouteWithAnimation } from './component/routes/RouteWithAnimation';
 
 
 function App() {
@@ -11,10 +11,9 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Routes>
-          <Route path="/" exact element={<HomePage />} />
-          <Route path="/projects/f1-predictor" element={<PredictorPage />} />
-        </Routes>
+        <LocationProvider>
+          <RouteWithAnimation />
+        </LocationProvider>
       </div>
     </Router>
    

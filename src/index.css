@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 /* @import "./global.css"; */
+
+@font-face {
+  font-family: "Formula1";
+  src: local("Formula1"),
+    url("./fonts/Formula1-Regular-1.ttf") format("truetype");
+  }

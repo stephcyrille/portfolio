@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import i18n (needs to be bundled ;))
 import './i18n';
+import './fonts/Formula1-Regular-1.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
