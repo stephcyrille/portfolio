@@ -170,7 +170,7 @@ i18n.use(initReactI18next).init({
           }
         },
         skills: {
-          skill_resume: "Je possède plusieurs casquettes mais en en général je me considère comme un ingénieur sans vouloir trop m'attarder sur le titre, de par ma manière d'appréhender les problèmes à 360 dégrés ce qui me permet de me positionner à la place du client et en même temps du développeur.",
+          skill_resume: "Je possède plusieurs casquettes mais en général je me considère comme un ingénieur sans vouloir trop m'attarder sur le titre, de par ma manière d'appréhender les problèmes à 360 dégrés ce qui me permet de me positionner à la place du client et en même temps du développeur.",
           skill1: {
             title: 'Analyste Concepteur de SI',
             content: 'A partir d\'un besoin fonctionnel, je suis capable de monter un cahier de charge, planifier un projet de développement applicatif (activités, coûts et temps) et le suivre jusqu\'a sa mise en production.'
@@ -181,7 +181,7 @@ i18n.use(initReactI18next).init({
           },
           skill3: {
             title: 'Développeur Mobile',
-            content: 'Grace à la puissance des outils tels que Flutter et Dart je créer des application performantes et multi plateformes adaptées aux besoins utilisateurs.'
+            content: 'Grace à la puissance des outils tels que Flutter et Dart je crée des applications performantes et multi plateformes adaptées aux besoins utilisateurs.'
           },
           skill4: {
             title: 'Intégrateur Technico-fonctionnel ERP',
