@@ -15,6 +15,8 @@ i18n.use(initReactI18next).init({
         title: 'My personal online portfolio',
         french: "French",
         english: "English",
+        download: 'Download CV',
+        predictor: 'App F1',
         navbar: {
           home: "Home",
           about_me: "About me",
@@ -117,6 +119,8 @@ i18n.use(initReactI18next).init({
         title: 'Mon portfolio personnek en ligne',
         french: "Français",
         english: "Anglais",
+        download: 'Télécharger CV',
+        predictor: 'App F1',
         navbar: {
           home: "Accueil",
           about_me: "A propos de moi",

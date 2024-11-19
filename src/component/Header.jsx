@@ -16,6 +16,7 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import detectBrowserLanguage from 'detect-browser-language'
 import { Switcher } from './switcher/Switcher'
 import logo from '../assets/images/logo_scma_light.png'
+import cv from '../assets/files/CV.pdf'
 import french from '../assets/images/french.svg'
 import english from '../assets/images/english.svg'
 
@@ -102,10 +103,13 @@ export const Header = () => {
               <a href="#experience" className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
                 {t('navbar.experience')}
               </a>
+              <a href="https://f1.stephanemebenga.site" target='_blank' rel="noreferrer"  className="dark:text-gray-100 dark:hover:text-gray-600 text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
+                {t('predictor')}
+              </a>
             </>
           }
 
-          <Popover className="relative">
+          {/* <Popover className="relative">
             <Popover.Button 
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none 
                         hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200 dark:text-gray-100 dark:hover:text-gray-600">
@@ -156,7 +160,14 @@ export const Header = () => {
                 </div>
               </Popover.Panel>
             </Transition>
-          </Popover>
+          </Popover> */}
+          <a href={cv} 
+          className="dark:text-lime-100 dark:active:text-gray-700 dark:bg-black dark:hover:text-white -mx-3 
+                      rounded-lg px-2 py-2 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold leading-7 text-gray-800 
+                      hover:bg-gray-50 hover:text-lime-600 bg-lime-100"
+        >
+          <span className='hidden lg:inline-block mr-1'>{t('download')}</span>
+        </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {/* <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
