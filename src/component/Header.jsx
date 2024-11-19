@@ -1,18 +1,19 @@
 import { Fragment, useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Dialog, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
+  // ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
+  // ChartPieIcon,
+  // CursorArrowRaysIcon,
+  // FingerPrintIcon,
+  // SquaresPlusIcon,
   XMarkIcon,
   LanguageIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+// import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import detectBrowserLanguage from 'detect-browser-language'
 import { Switcher } from './switcher/Switcher'
 import logo from '../assets/images/logo_scma_light.png'
@@ -20,10 +21,6 @@ import cv from '../assets/files/CV.pdf'
 import french from '../assets/images/french.svg'
 import english from '../assets/images/english.svg'
 
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -59,18 +56,18 @@ export const Header = () => {
     setCurrentLanguage(lng);
   }, [i18n])
 
-  const products = [
-    { name: t('navbar.ressources.ask_for_quotation.title'), description: t('navbar.ressources.ask_for_quotation.text'), href: '#', icon: ChartPieIcon },
-    { name: t('navbar.ressources.my_projects.title'), description: t('navbar.ressources.my_projects.text'), href: '#', icon: FingerPrintIcon },
-    { name: t('navbar.ressources.my_resources.title'), description: t('navbar.ressources.my_resources.text'), href: '#', icon: CursorArrowRaysIcon },
-    { name: t('navbar.ressources.f1_predictor.title'), description: t('navbar.ressources.f1_predictor.text'), href: '#', icon: SquaresPlusIcon },
-    { name: t('navbar.ressources.blog.title'), description: t('navbar.ressources.blog.text'), href: '#', icon: ArrowPathIcon },
-  ]
+  // const products = [
+  //   { name: t('navbar.ressources.ask_for_quotation.title'), description: t('navbar.ressources.ask_for_quotation.text'), href: '#', icon: ChartPieIcon },
+  //   { name: t('navbar.ressources.my_projects.title'), description: t('navbar.ressources.my_projects.text'), href: '#', icon: FingerPrintIcon },
+  //   { name: t('navbar.ressources.my_resources.title'), description: t('navbar.ressources.my_resources.text'), href: '#', icon: CursorArrowRaysIcon },
+  //   { name: t('navbar.ressources.f1_predictor.title'), description: t('navbar.ressources.f1_predictor.text'), href: '#', icon: SquaresPlusIcon },
+  //   { name: t('navbar.ressources.blog.title'), description: t('navbar.ressources.blog.text'), href: '#', icon: ArrowPathIcon },
+  // ]
 
-  const callsToAction = [
-    { name: t('navbar.ressources.call_to_action.movie'), href: '#', icon: PlayCircleIcon },
-    { name: t('navbar.ressources.call_to_action.contact'), href: '#contact', icon: PhoneIcon },
-  ]
+  // const callsToAction = [
+  //   { name: t('navbar.ressources.call_to_action.movie'), href: '#', icon: PlayCircleIcon },
+  //   { name: t('navbar.ressources.call_to_action.contact'), href: '#contact', icon: PhoneIcon },
+  // ]
 
   return (
     <header className="bg-white fixed w-screen z-10 dark:bg-gray-800">
