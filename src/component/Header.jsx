@@ -162,12 +162,12 @@ export const Header = () => {
             </Transition>
           </Popover> */}
           <a href={cv} 
-          className="dark:text-lime-100 dark:active:text-gray-700 dark:bg-black dark:hover:text-white -mx-3 
-                      rounded-lg px-2 py-2 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold leading-7 text-gray-800 
-                      hover:bg-gray-50 hover:text-lime-600 bg-lime-100"
-        >
-          <span className='hidden lg:inline-block mr-1'>{t('download')}</span>
-        </a>
+            className="dark:text-lime-100 dark:active:text-gray-700 dark:bg-black dark:hover:text-white -mx-3 
+                        rounded-lg px-2 py-2 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold leading-7 text-gray-800 
+                        hover:bg-gray-50 hover:text-lime-600 bg-lime-100"
+          >
+            <span className='hidden lg:inline-block mr-1'>{t('download')}</span>
+          </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {/* <a href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:bg-lime-100 py-2 px-3 rounded-lg ease-in-out delay-80 duration-200">
@@ -313,9 +313,18 @@ export const Header = () => {
                     >
                       {t('navbar.experience')}
                     </a>
+                    <a href="https://f1.stephanemebenga.site" target='_blank' rel="noreferrer"  className="dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      {t('predictor')}
+                    </a>
+                    <a href={cv} 
+                  className="dark:text-lime-100 dark:active:text-gray-700 dark:bg-black dark:hover:text-white ounded-lg px-3 py-2 text-base font-semibold leading-7 lg:px-4 lg:py-2 lg:text-sm text-gray-800 
+                              hover:bg-gray-50 hover:text-lime-600 bg-lime-100"
+                >
+                  {t('download')}
+                </a>
                   </>
                 }
-                <Disclosure as="div" className="-mx-3 dark:bg-gray-300">
+                {/* <Disclosure as="div" className="-mx-3 dark:bg-gray-300">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-200 dark:active:text-gray-700 dark:hover:text-gray-700 dark:rounded-none">
@@ -339,7 +348,7 @@ export const Header = () => {
                       </Disclosure.Panel>
                     </>
                   )}
-                </Disclosure>
+                </Disclosure> */}
               </div>
               <div className="py-6">
                 {/* <a
