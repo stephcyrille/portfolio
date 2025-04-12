@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import arrLeft from '../../assets/images/arrow-left.png'
+import arrRight from '../../assets/images/arrow-right.png'
 import bpop from '../../assets/images/logo_bp_aura.jpeg'
 import basf from '../../assets/images/basf.svg'
 import ewonga from '../../assets/images/logoEwonga.png'
@@ -338,13 +340,17 @@ export const ExperienceStarWarComponent = () => {
             <div className="card-evolution">
                 <div className="card-evolution-arrow">
                     <img 
-                      src="https://star-wars-lime.vercel.app/assets/arrow-left.png" 
+                      src={arrLeft} 
                       className="arrow-left"
+                      width={30}
+                      height={30}
                       alt="arrow-left"
                       onClick={onArrowLeftClick}
                     />
                     <img 
-                      src="https://star-wars-lime.vercel.app/assets/arrow-right.png" 
+                      src={arrRight}
+                      width={30}
+                      height={30}
                       className="arrow-right" 
                       alt="arrow-right"
                       onClick={onArrowRightClick}
